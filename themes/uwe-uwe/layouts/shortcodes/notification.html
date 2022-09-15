@@ -1,0 +1,21 @@
+{{ $type  := .Get "type" }}
+{{ $title := .Get "title" }}
+{{ $sidenote := .Get "sidenote" }}
+
+{{ if $sidenote }}
+    <aside aria-label="notification - {{ $type }}" class="notification sidenote {{$type}} {{$sidenote}}">
+{{ else }}
+    <div aria-label="notification - {{ $type }}" class="notification {{$type}}">
+{{ end }}
+    <img alt="{{ $type }} icon" src="/assets/img/icons/{{ $type }}-icon.png" height="48" width="48">
+    <div>
+        {{ if $title }}
+            <h4>{{ $title }}</h4>
+        {{ end }}
+        {{ .Inner }}
+    </div>
+{{ if $sidenote }}
+    </aside>
+{{ else }}
+    </div>
+{{ end }}

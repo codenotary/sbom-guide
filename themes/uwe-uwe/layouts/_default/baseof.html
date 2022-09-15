@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode | default "en-US" }}'>
+
+    <!--
+    #################
+    ### PAGE HEAD ###
+    #################
+    -->
+    {{- partial "head.html" . -}}
+
+    <!--
+    #################
+    ### PAGE BODY ###
+    #################
+    -->
+    <body>
+
+        <!-- 
+        ######################
+        ### CONTENT HEADER ###
+        ######################
+        -->
+        {{- partial "header.html" . -}}
+
+        <!-- 
+        ################################
+        ### CONTENT NAVIGATION / TOC ###
+        ################################
+        -->
+        {{- partial "navigation.html" . -}}
+
+        <!-- 
+        ###############
+        ### CONTENT ###
+        ###############
+        -->
+        <main id="page-content">
+            {{- block "main" . }}{{- end }}
+        </main>
+
+        {{- partial "body-end-js.html" . -}}
+    </body>
+</html>
