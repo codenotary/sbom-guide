@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Developer&#39;s Guide to SBOMs</title>
-    <link>http://sbom-guide/</link>
+    <link>http://nickanderegg.github.io/sbom-guide/</link>
     <description>Recent content on Developer&#39;s Guide to SBOMs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://sbom-guide/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Page Introduction</title>
-      <link>http://sbom-guide/01_intro/</link>
+      <link>http://nickanderegg.github.io/sbom-guide/01_intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sbom-guide/01_intro/</guid>
+      <guid>http://nickanderegg.github.io/sbom-guide/01_intro/</guid>
       <description>Introduction A Software Bill of Materials (SBOM) is a manifest which uniquely identifies and enumerates the software dependencies contained within a codebase, build artifact, or runtime container. A dynamic SBOM can further integrate information from vulnerability scanners to help ensure the integrity of your software supply chain.</description>
     </item>
     
     <item>
       <title>Software Bills of Materials (SBOMs)</title>
-      <link>http://sbom-guide/10_sboms/</link>
+      <link>http://nickanderegg.github.io/sbom-guide/10_sboms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sbom-guide/10_sboms/</guid>
+      <guid>http://nickanderegg.github.io/sbom-guide/10_sboms/</guid>
       <description>Why SBOMs? Most modern applications are built atop a growing library of open-source and proprietary components; it would be tedious and time-consuming to manually identify each component, evaluate the components&amp;rsquo; dependencies, and determine if those components are then suitable for inclusion in the project.
 Instead, automated software assembles the SBOM for each release artifact at some point in the build pipeline, when dependency and build information is readily available.
 The SBOM is a mechanism to share build-time component inventories between projects and developers, and it serves as a fundamental tool for managing software supply chain integrity.</description>
@@ -28,10 +28,10 @@ The SBOM is a mechanism to share build-time component inventories between projec
     
     <item>
       <title>Using Community Attestation Service (CAS)</title>
-      <link>http://sbom-guide/30_cas_usage/</link>
+      <link>http://nickanderegg.github.io/sbom-guide/30_cas_usage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sbom-guide/30_cas_usage/</guid>
+      <guid>http://nickanderegg.github.io/sbom-guide/30_cas_usage/</guid>
       <description>About Codenotary&amp;rsquo;s Community Attestation Service TODO.
 Using CAS to Notarize and Authenticate TODO: Intro.
 cas CLI Quickstart # Get API key from: https://cas.codenotary.com # Get CAS: https://github.com/codenotary/cas/releases # Login export CAS_API_KEY=YOUR_API_KEY; cas login ## Create and sign a Software Bill of Materials cas notarize --bom docker://ubuntu ## Verify and authenticate assets with signing key cas authenticate --bom docker://ubuntu Summary of Functionality TODO: Brief listing of all functionality.
@@ -40,20 +40,20 @@ Basic Notarization and Authentication # Notarize image cas notarize docker://con
     
     <item>
       <title>Working with Other Tools</title>
-      <link>http://sbom-guide/40_other_tools/</link>
+      <link>http://nickanderegg.github.io/sbom-guide/40_other_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sbom-guide/40_other_tools/</guid>
+      <guid>http://nickanderegg.github.io/sbom-guide/40_other_tools/</guid>
       <description>Working with other tools Import from spfx and cyclonedx TODO.
 Export to spfx or cyclonedx TODO.</description>
     </item>
     
     <item>
       <title>Using SBOMs with Trustcenter</title>
-      <link>http://sbom-guide/50_trustcenter/</link>
+      <link>http://nickanderegg.github.io/sbom-guide/50_trustcenter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sbom-guide/50_trustcenter/</guid>
+      <guid>http://nickanderegg.github.io/sbom-guide/50_trustcenter/</guid>
       <description>SBOMs using Trustcenter TODO.
 Searching with Trustcenter TODO.</description>
     </item>
