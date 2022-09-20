@@ -255,21 +255,21 @@ pre,
 :not(pre) > code[class*="language-"], 
 pre[class*="language-"],
 .highligt > pre {
-    background: transparent !important;
-    background-color: transparent !important;
+    background: #333333 !important;
+    /* background-color: transparent !important; */
 }
 
 pre,
 pre[class*="language-"],
 .highligt > pre {
     border: 1px dashed #000000 !important;
-    color: #000000 !important;
+    color: #ffffff !important;
     font-size: 0.875rem;
     overflow-x: auto;
     padding: 12px !important;
     overflow-y: scroll;
     max-height:  50vh;
-    max-width: 1280px;
+    max-width: 100ex;
     margin-left: auto;
     margin-right: auto;
 }

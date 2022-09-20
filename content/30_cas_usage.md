@@ -1,7 +1,7 @@
 ---
 weight: 30
 title: "Using Community Attestation Service (CAS)"
-draft: false
+draft: true
 ---
 
 ## About Codenotary's Community Attestation Service

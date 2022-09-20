@@ -1,51 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Developer&#39;s Guide to SBOMs</title>
-    <link>http://nickanderegg.github.io/sbom-guide/</link>
-    <description>Recent content on Developer&#39;s Guide to SBOMs</description>
+    <title>Using vcn with Trustcenter on Developer&#39;s Guide to SBOMs</title>
+    <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/</link>
+    <description>Recent content in Using vcn with Trustcenter on Developer&#39;s Guide to SBOMs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Page Introduction</title>
-      <link>http://nickanderegg.github.io/sbom-guide/01_intro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/01_intro/</guid>
-      <description>Introduction A Software Bill of Materials (SBOM) is a manifest which uniquely identifies and enumerates the software dependencies contained within a codebase, build artifact, or runtime container. A dynamic SBOM can further integrate information from vulnerability scanners to help ensure the integrity of your software supply chain.</description>
-    </item>
-    
-    <item>
-      <title>Software Bills of Materials (SBOMs)</title>
-      <link>http://nickanderegg.github.io/sbom-guide/10_sboms/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/10_sboms/</guid>
-      <description>Why SBOMs? Most modern applications are built atop a growing library of open-source and proprietary components; it would be tedious and time-consuming to manually identify each component, evaluate the components&amp;rsquo; dependencies, and determine if those components are then suitable for inclusion in the project.
-Instead, automated software assembles the SBOM for each release artifact at some point in the build pipeline, when dependency and build information is readily available.
-The SBOM is a mechanism to share build-time component inventories between projects and developers, and it serves as a fundamental tool for managing software supply chain integrity.</description>
-    </item>
-    
-    <item>
-      <title>Working with Other Tools</title>
-      <link>http://nickanderegg.github.io/sbom-guide/40_other_tools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/40_other_tools/</guid>
-      <description>Working with other tools Import from spfx and cyclonedx TODO.
-Export to spfx or cyclonedx TODO.</description>
-    </item>
-    
-    <item>
-      <title>Using SBOMs with Trustcenter</title>
-      <link>http://nickanderegg.github.io/sbom-guide/50_trustcenter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/50_trustcenter/</guid>
-      <description>SBOMs using Trustcenter TODO.
-Searching with Trustcenter TODO.</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/20_vcn_usage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to VCN</title>
       <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/110_vcn_intro/</link>
