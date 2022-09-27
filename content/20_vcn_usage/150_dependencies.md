@@ -1,5 +1,5 @@
 ---
-title: "Securing Dependencies with Trustcenter"
+title: Working with Dependencies
 weight: 150
 draft: false
 ---
@@ -20,6 +20,7 @@ To
 vcn <command> <scheme>://<image_or_container> [command options]
 ```
 
+TODO:
 > Supported schemes:
 > - docker: Docker image ID or tag, requires running docker deamon container
 > - container: Docker container ID or tag, requires running docker deamon image

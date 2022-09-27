@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About Codenotary&rsquo;s Community Attestation Service # TODO.
+Using CAS to Notarize and Authenticate # TODO: Intro.
+cas CLI Quickstart # # Get API key from: https://cas.codenotary.com # Get CAS: https://github.com/codenotary/cas/releases # Login export CAS_API_KEY=YOUR_API_KEY; cas login ## Create and sign a Software Bill of Materials cas notarize --bom docker://ubuntu ## Verify and authenticate assets with signing key cas authenticate --bom docker://ubuntu Summary of Functionality # TODO: Brief listing of all functionality.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Intro to CAS" />
+<meta property="og:description" content="About Codenotary&rsquo;s Community Attestation Service # TODO.
+Using CAS to Notarize and Authenticate # TODO: Intro.
+cas CLI Quickstart # # Get API key from: https://cas.codenotary.com # Get CAS: https://github.com/codenotary/cas/releases # Login export CAS_API_KEY=YOUR_API_KEY; cas login ## Create and sign a Software Bill of Materials cas notarize --bom docker://ubuntu ## Verify and authenticate assets with signing key cas authenticate --bom docker://ubuntu Summary of Functionality # TODO: Brief listing of all functionality." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://nickanderegg.github.io/sbom-guide/40_cas/410_intro/" /><meta property="article:section" content="40_cas" />
+
+
+
+<title>Intro to CAS | Developer&#39;s Guide to SBOMs</title>
+<link rel="manifest" href="/sbom-guide/manifest.json">
+<link rel="icon" href="/sbom-guide/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/sbom-guide/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/sbom-guide/flexsearch.min.js"></script>
+  <script defer src="/sbom-guide/en.search.min.0d3ead4f6ed012cea429df86b1258a1c1471c8fa63eaf5991a7467cbff020c32.js" integrity="sha256-DT6tT27QEs6kKd&#43;GsSWKHBRxyPpj6vWZGnRny/8CDDI=" crossorigin="anonymous"></script>
+
+  <script defer src="/sbom-guide/sw.min.7e5d3d741a2cbe5d2c6c4f16e894e371d828f808c9041b41247360eafd51962a.js" integrity="sha256-fl09dBosvl0sbE8W6JTjcdgo&#43;AjJBBtBJHNg6v1Rlio=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/sbom-guide/"><span>Developer&#39;s Guide to SBOMs</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Using vcn with Trustcenter</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/20_vcn_usage/110_vcn_intro/" class="">Introduction to VCN</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/20_vcn_usage/115_vcn_cheatsheet/" class="">vcn Cheatsheet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/20_vcn_usage/120_notarizing_assets/" class="">Notarizing Assets with Trustcenter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/20_vcn_usage/130_authenticating_assets/" class="">Authenticating Assets with Trustcenter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/20_vcn_usage/140_bom_authentication/" class="">Authenticating SBOMs with Trustcenter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/20_vcn_usage/150_dependencies/" class="">Working with Dependencies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/20_vcn_usage/160_authenticating_dependencies/" class="">Authenticating Dependencies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/20_vcn_usage/190_other_tools/" class="">Working with Other Tools</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Codenotary Trustcenter</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/30_trustcenter/310_intro/" class="">Intro to Trustcenter</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Community Attestation Service</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/40_cas/410_intro/" class="active">Intro to CAS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>SBOM Ecosystem</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/70_ecosystem/cyclonedx/" class="">CycloneDX SBOM</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/70_ecosystem/cyclonedx/cyclonedx_tools/" class="">Tools</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/70_ecosystem/spdx/" class="">SPDX SBOM</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/70_ecosystem/spdx/spdx_tools/" class="">Tools</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Examples &amp; Use Cases</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/80_examples/vulnerability_search/" class="">Searching for Vulnerabilities</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Reference</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/90_reference/glossary/" class="">Glossary</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/sbom-guide/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Intro to CAS</strong>
+
+  <label for="toc-control">
+    
+    <img src="/sbom-guide/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-codenotarys-community-attestation-service">About Codenotary&rsquo;s Community Attestation Service</a></li>
+    <li><a href="#using-cas-to-notarize-and-authenticate">Using CAS to Notarize and Authenticate</a>
+      <ul>
+        <li><a href="#cas-cli-quickstart"><code>cas</code> CLI Quickstart</a></li>
+        <li><a href="#summary-of-functionality">Summary of Functionality</a></li>
+        <li><a href="#basic-notarization-and-authentication">Basic Notarization and Authentication</a></li>
+        <li><a href="#authenticating-trusted-dependencies">Authenticating Trusted Dependencies</a></li>
+        <li><a href="#notarizing-container-images">Notarizing container images</a></li>
+        <li><a href="#notarizing-source-code">Notarizing source code</a></li>
+        <li><a href="#notarizing-packages">Notarizing packages</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="about-codenotarys-community-attestation-service">
+  About Codenotary&rsquo;s Community Attestation Service
+  <a class="anchor" href="#about-codenotarys-community-attestation-service">#</a>
+</h2>
+<p>TODO.</p>
+<h2 id="using-cas-to-notarize-and-authenticate">
+  Using CAS to Notarize and Authenticate
+  <a class="anchor" href="#using-cas-to-notarize-and-authenticate">#</a>
+</h2>
+<p>TODO: Intro.</p>
+<h3 id="cas-cli-quickstart">
+  <code>cas</code> CLI Quickstart
+  <a class="anchor" href="#cas-cli-quickstart">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Get API key from: https://cas.codenotary.com</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get CAS:</span>
+</span></span><span style="display:flex;"><span>https://github.com/codenotary/cas/releases
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Login</span>
+</span></span><span style="display:flex;"><span>export CAS_API_KEY<span style="color:#f92672">=</span>YOUR_API_KEY; cas login
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Create and sign a Software Bill of Materials</span>
+</span></span><span style="display:flex;"><span>cas notarize --bom docker://ubuntu
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Verify and authenticate assets with signing key</span>
+</span></span><span style="display:flex;"><span>cas authenticate --bom docker://ubuntu
+</span></span></code></pre></div><h3 id="summary-of-functionality">
+  Summary of Functionality
+  <a class="anchor" href="#summary-of-functionality">#</a>
+</h3>
+<p>TODO: Brief listing of all functionality.</p>
+<h3 id="basic-notarization-and-authentication">
+  Basic Notarization and Authentication
+  <a class="anchor" href="#basic-notarization-and-authentication">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Notarize image</span>
+</span></span><span style="display:flex;"><span>cas notarize docker://container_image
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Authenticate image</span>
+</span></span><span style="display:flex;"><span>cas authenticate docker://container -SignerID.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Inspect image</span>
+</span></span><span style="display:flex;"><span>cas inspect docker://container_image
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify image</span>
+</span></span><span style="display:flex;"><span>cas authenticate docker://container_image <span style="color:#f92672">&amp;&amp;</span> docker run container_image
+</span></span></code></pre></div><h3 id="authenticating-trusted-dependencies">
+  Authenticating Trusted Dependencies
+  <a class="anchor" href="#authenticating-trusted-dependencies">#</a>
+</h3>
+<p>If we attempt to authenticate a Docker image which has not yet been notarized with out signing key, we receive a warning that the asset hasn&rsquo;t yet been notarized, as well as a listing of the asset&rsquo;s dependencies, their hashes, and their authentication status (<code>Unknown</code>, in this case).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>❯ cas authenticate --bom docker://python:3.9-alpine
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Resolving dependencies...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Authenticating dependencies...
+</span></span><span style="display:flex;"><span> 100% |██████████████████████████████████████████████████████| <span style="color:#f92672">(</span>36/36, <span style="color:#ae81ff">59</span> it/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.python-rundeps@20220907.231849   b9bddeccfab9c3d7731f6b39360dcf3cfdeb1b7f Unknown
+</span></span><span style="display:flex;"><span>alpine-baselayout@3.2.0-r22       3c6c70ccb77b490fd2663506ae7727a638eda4a6 Unknown
+</span></span><span style="display:flex;"><span>alpine-baselayout-data@3.2.0-r22  d6554033bbe7f571edc82954fd97e59aa4c7f045 Unknown
+</span></span><span style="display:flex;"><span>alpine-keys@2.4-r1                cffd2a49107574ba448f4b23b4bfc597676b9054 Unknown
+</span></span><span style="display:flex;"><span>. . .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Warning: c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf was not notarized
+</span></span></code></pre></div><p>We can then notarize this image, which resolves all dependencies, authenticates them against CAS, and signs the <code>Unknown</code> dependencies, changing the status to <code>Trusted</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>❯ cas notarize --bom docker://python:3.9-alpine
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Resolving dependencies...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Authenticating dependencies...
+</span></span><span style="display:flex;"><span> 100% |██████████████████████████████████████████████████████| <span style="color:#f92672">(</span>36/36, <span style="color:#ae81ff">58</span> it/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Notarizing <span style="color:#ae81ff">36</span> dependencies ...
+</span></span><span style="display:flex;"><span> 100% |██████████████████████████████████████████████████████| <span style="color:#f92672">(</span>36/36, <span style="color:#ae81ff">39</span> it/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.python-rundeps@20220907.231849   b9bddeccfab9c3d7731f6b39360dcf3cfdeb1b7f Trusted
+</span></span><span style="display:flex;"><span>alpine-baselayout@3.2.0-r22       3c6c70ccb77b490fd2663506ae7727a638eda4a6 Trusted
+</span></span><span style="display:flex;"><span>alpine-baselayout-data@3.2.0-r22  d6554033bbe7f571edc82954fd97e59aa4c7f045 Trusted
+</span></span><span style="display:flex;"><span>. . .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Your assets will not be uploaded. They will be processed locally.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Kind:   docker
+</span></span><span style="display:flex;"><span>Name:   docker://python:3.9-alpine
+</span></span><span style="display:flex;"><span>Hash:   c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf
+</span></span><span style="display:flex;"><span>Metadata: architecture<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;arm64&#34;</span>
+</span></span><span style="display:flex;"><span>    docker<span style="color:#f92672">={</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Architecture&#34;</span>: <span style="color:#e6db74">&#34;arm64&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Created&#34;</span>: <span style="color:#e6db74">&#34;2022-09-07T23:19:03.452996827Z&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;DockerVersion&#34;</span>: <span style="color:#e6db74">&#34;20.10.12&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Id&#34;</span>: <span style="color:#e6db74">&#34;sha256:c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf&#34;</span>,
+</span></span><span style="display:flex;"><span>        . . .
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    platform<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;linux&#34;</span>
+</span></span><span style="display:flex;"><span>    version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3.9-alpine&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SignerID: bmlja0Babcdefgh12345<span style="color:#f92672">==</span>
+</span></span><span style="display:flex;"><span>Apikey revoked: no
+</span></span><span style="display:flex;"><span>Status:   TRUSTED
+</span></span><span style="display:flex;"><span>Dependencies:
+</span></span><span style="display:flex;"><span>    .python-rundeps@20220907.231849   b9bddeccfab9c3d7731f6b39360dcf3cfdeb1b7f
+</span></span><span style="display:flex;"><span>    alpine-baselayout@3.2.0-r22       3c6c70ccb77b490fd2663506ae7727a638eda4a6
+</span></span><span style="display:flex;"><span>    alpine-baselayout-data@3.2.0-r22  d6554033bbe7f571edc82954fd97e59aa4c7f045
+</span></span><span style="display:flex;"><span>    alpine-keys@2.4-r1                cffd2a49107574ba448f4b23b4bfc597676b9054
+</span></span><span style="display:flex;"><span>    apk-tools@2.12.9-r3               bd9d72a8be3f3e5f046759c4e82086b6b7195622
+</span></span><span style="display:flex;"><span>    busybox@1.35.0-r17                31ea3e2c718f4a2dee63d808a2e1156fdcfc15ba
+</span></span><span style="display:flex;"><span>    . . .
+</span></span></code></pre></div><p>Now, if we attempt to authenticate the next version of the image (<code>python:3.10-alpine</code> instead of <code>python:3.9-alpine</code>, we are again warned that the asset has not been notarized. Unlike in the previous <code>cas authenticate</code> example, however, all but one of the resolved dependences is already marked as <code>Trusted</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>❯ cas authenticate --bom docker://python:3.10-alpine
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Resolving dependencies...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Authenticating dependencies...
+</span></span><span style="display:flex;"><span> 100% |██████████████████████████████████████████████████████| <span style="color:#f92672">(</span>36/36, <span style="color:#ae81ff">17</span> it/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.python-rundeps@20220907.223701   f3105e48f2a5caae5d0d2b6cbba5468a06a111c2 Unknown
+</span></span><span style="display:flex;"><span>alpine-baselayout@3.2.0-r22       3c6c70ccb77b490fd2663506ae7727a638eda4a6 Trusted
+</span></span><span style="display:flex;"><span>alpine-baselayout-data@3.2.0-r22  d6554033bbe7f571edc82954fd97e59aa4c7f045 Trusted
+</span></span><span style="display:flex;"><span>alpine-keys@2.4-r1                cffd2a49107574ba448f4b23b4bfc597676b9054 Trusted
+</span></span><span style="display:flex;"><span>apk-tools@2.12.9-r3               bd9d72a8be3f3e5f046759c4e82086b6b7195622 Trusted
+</span></span><span style="display:flex;"><span>busybox@1.35.0-r17                31ea3e2c718f4a2dee63d808a2e1156fdcfc15ba Trusted
+</span></span><span style="display:flex;"><span>. . .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Warning: 85e5afa95f3f0b68ffc12ae1f57557dc2115bb822c9e9ff0278 was not notarized
+</span></span></code></pre></div><p>After <code>cas authenticate</code> resolves the container&rsquo;s dependencies (using Alpine&rsquo;s package manager to enumerate installed packages), it attempts to authenticate those dependencies using the current signing key. Because the underlying image containing the operating system is the same for both <code>python:3.9-alpine</code> and <code>python:3.10-alpine</code>, the only detected difference is the Python installation.</p>
+<p>As you can see, not only does CAS help keep <code>Untrusted</code> software out of your production environment, but it can also reduce the burden of assessing dependency changes by indicating which have already been trusted.</p>
+<h3 id="notarizing-container-images">
+  Notarizing container images
+  <a class="anchor" href="#notarizing-container-images">#</a>
+</h3>
+<p>TODO.</p>
+<h3 id="notarizing-source-code">
+  Notarizing source code
+  <a class="anchor" href="#notarizing-source-code">#</a>
+</h3>
+<p>TODO.</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-notarize-source-code" id="tabs-notarize-source-code-0" checked="checked" />
+  <label for="tabs-notarize-source-code-0">Python</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>python examples here
+</span></span></code></pre></div></div><input type="radio" class="toggle" name="tabs-notarize-source-code" id="tabs-notarize-source-code-1"  />
+  <label for="tabs-notarize-source-code-1">Go</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Go" data-lang="Go"><span style="display:flex;"><span><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">example</span> <span style="color:#a6e22e">here</span>
+</span></span></code></pre></div></div><input type="radio" class="toggle" name="tabs-notarize-source-code" id="tabs-notarize-source-code-2"  />
+  <label for="tabs-notarize-source-code-2">Java</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>Java example here
+</span></span></code></pre></div></div><input type="radio" class="toggle" name="tabs-notarize-source-code" id="tabs-notarize-source-code-3"  />
+  <label for="tabs-notarize-source-code-3">Node</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#a6e22e">Node</span> <span style="color:#a6e22e">example</span> <span style="color:#a6e22e">here</span>
+</span></span></code></pre></div></div><input type="radio" class="toggle" name="tabs-notarize-source-code" id="tabs-notarize-source-code-4"  />
+  <label for="tabs-notarize-source-code-4">.net</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>.net example here
+</span></span></code></pre></div></div><input type="radio" class="toggle" name="tabs-notarize-source-code" id="tabs-notarize-source-code-5"  />
+  <label for="tabs-notarize-source-code-5">PHP</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PHP" data-lang="PHP"><span style="display:flex;"><span><span style="color:#a6e22e">PHP</span> <span style="color:#a6e22e">example</span> <span style="color:#a6e22e">here</span>
+</span></span></code></pre></div></div><input type="radio" class="toggle" name="tabs-notarize-source-code" id="tabs-notarize-source-code-6"  />
+  <label for="tabs-notarize-source-code-6">Rust</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Rust" data-lang="Rust"><span style="display:flex;"><span>Rust example here
+</span></span></code></pre></div></div></div>
+
+<h3 id="notarizing-packages">
+  Notarizing packages
+  <a class="anchor" href="#notarizing-packages">#</a>
+</h3>
+<p>TODO.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-codenotarys-community-attestation-service">About Codenotary&rsquo;s Community Attestation Service</a></li>
+    <li><a href="#using-cas-to-notarize-and-authenticate">Using CAS to Notarize and Authenticate</a>
+      <ul>
+        <li><a href="#cas-cli-quickstart"><code>cas</code> CLI Quickstart</a></li>
+        <li><a href="#summary-of-functionality">Summary of Functionality</a></li>
+        <li><a href="#basic-notarization-and-authentication">Basic Notarization and Authentication</a></li>
+        <li><a href="#authenticating-trusted-dependencies">Authenticating Trusted Dependencies</a></li>
+        <li><a href="#notarizing-container-images">Notarizing container images</a></li>
+        <li><a href="#notarizing-source-code">Notarizing source code</a></li>
+        <li><a href="#notarizing-packages">Notarizing packages</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

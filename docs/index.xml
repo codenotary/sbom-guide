@@ -1,49 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Developer&#39;s Guide to SBOMs</title>
+    <title>Introduction on Developer&#39;s Guide to SBOMs</title>
     <link>http://nickanderegg.github.io/sbom-guide/</link>
-    <description>Recent content on Developer&#39;s Guide to SBOMs</description>
+    <description>Recent content in Introduction on Developer&#39;s Guide to SBOMs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Page Introduction</title>
-      <link>http://nickanderegg.github.io/sbom-guide/01_intro/</link>
+      <title>Tools</title>
+      <link>http://nickanderegg.github.io/sbom-guide/70_ecosystem/cyclonedx/cyclonedx_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nickanderegg.github.io/sbom-guide/01_intro/</guid>
-      <description>Introduction A Software Bill of Materials (SBOM) is a manifest which uniquely identifies and enumerates the software dependencies contained within a codebase, build artifact, or runtime container. A dynamic SBOM can further integrate information from vulnerability scanners to help ensure the integrity of your software supply chain.</description>
+      <guid>http://nickanderegg.github.io/sbom-guide/70_ecosystem/cyclonedx/cyclonedx_tools/</guid>
+      <description> CycloneDX Tools # </description>
     </item>
     
     <item>
-      <title>Software Bills of Materials (SBOMs)</title>
-      <link>http://nickanderegg.github.io/sbom-guide/10_sboms/</link>
+      <title>Tools</title>
+      <link>http://nickanderegg.github.io/sbom-guide/70_ecosystem/spdx/spdx_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nickanderegg.github.io/sbom-guide/10_sboms/</guid>
-      <description>Why SBOMs? Most modern applications are built atop a growing library of open-source and proprietary components; it would be tedious and time-consuming to manually identify each component, evaluate the components&amp;rsquo; dependencies, and determine if those components are then suitable for inclusion in the project.
-Instead, automated software assembles the SBOM for each release artifact at some point in the build pipeline, when dependency and build information is readily available.
-The SBOM is a mechanism to share build-time component inventories between projects and developers, and it serves as a fundamental tool for managing software supply chain integrity.</description>
-    </item>
-    
-    <item>
-      <title>Working with Other Tools</title>
-      <link>http://nickanderegg.github.io/sbom-guide/40_other_tools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/40_other_tools/</guid>
-      <description>Working with other tools Import from spfx and cyclonedx TODO.
-Export to spfx or cyclonedx TODO.</description>
-    </item>
-    
-    <item>
-      <title>Using SBOMs with Trustcenter</title>
-      <link>http://nickanderegg.github.io/sbom-guide/50_trustcenter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/50_trustcenter/</guid>
-      <description>SBOMs using Trustcenter TODO.
-Searching with Trustcenter TODO.</description>
+      <guid>http://nickanderegg.github.io/sbom-guide/70_ecosystem/spdx/spdx_tools/</guid>
+      <description> SPDX Tools # </description>
     </item>
     
     <item>
@@ -52,8 +30,17 @@ Searching with Trustcenter TODO.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/110_vcn_intro/</guid>
-      <description>Specifying Assets in vcn Commands Throughout this documentation, you&amp;rsquo;ll see the placeholder &amp;lt;artifact&amp;gt; used to refer to an asset that you want to authenticate or notarize. For example:
+      <description>Specifying Assets in vcn Commands # Throughout this documentation, you&amp;rsquo;ll see the placeholder &amp;lt;artifact&amp;gt; used to refer to an asset that you want to authenticate or notarize. For example:
 vcn authenticate &amp;lt;artifact&amp;gt; The asset referred to by the &amp;lt;artifact&amp;gt; placeholder can be a file, directory, image, or git repository. The following are examples of how to specify an asset, where COMMAND is a placeholder for any vcn command that accepts an asset as an argument:</description>
+    </item>
+    
+    <item>
+      <title>vcn Cheatsheet</title>
+      <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/115_vcn_cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/115_vcn_cheatsheet/</guid>
+      <description> vcn Cheatsheet # </description>
     </item>
     
     <item>
@@ -62,10 +49,9 @@ vcn authenticate &amp;lt;artifact&amp;gt; The asset referred to by the &amp;lt;a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/120_notarizing_assets/</guid>
-      <description>Notarize an asset with vcn To notarize an asset:
+      <description>Notarize an asset with vcn # To notarize an asset:
 vcn notarize &amp;lt;artifact&amp;gt; Passing the --bom flag to the vcn notarize command will notarize the asset&amp;rsquo;s dependencies and immutably associate them with the asset in Trustcenter:
-vcn notarize --bom &amp;lt;artifact&amp;gt; If you need to notarize assets in bulk, you can supply a CSV file that enumerates the hash, name, and labels of each asset to the vcn notarize command:
-vcn notarize --import-file &amp;lt;csv_file&amp;gt; The contents of your CSV file should follow the format</description>
+vcn notarize --bom &amp;lt;artifact&amp;gt; If you need to notarize assets in bulk, you can supply a CSV file that enumerates the hash, name, and labels of each asset to the vcn notarize command:</description>
     </item>
     
     <item>
@@ -74,8 +60,10 @@ vcn notarize --import-file &amp;lt;csv_file&amp;gt; The contents of your CSV fil
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/130_authenticating_assets/</guid>
-      <description>Authenticate asset with vcn To authenticate an asset with Trustcenter, which verifies the integrity and signature of the asset, use the vcn authenticate command:
-Usage: vcn authenticate [flags] ARG(s) Aliases: authenticate, a, verify, v Examples: vcn authenticate /bin/vcn Flags: --attach string authenticate an artifact on a specific attachment label. With this it&amp;#39;s be possible to retrieve the specific attachment with: vcn a binary1 --attach=vscanner.result:jobid123 --output=attachments or to get all attachments for a label: vcn a binary1 --attach=jobid123 --output=attachments --bom link asset to its dependencies from BOM --bom-batch-size uint by default BOM dependencies are authenticated/notarized in batches of up to 100 dependencies each.</description>
+      <description> Authenticating Assets with Trustcenter # Using vcn to authenticate an asset # To authenticate an asset with Trustcenter, which verifies the integrity and signature of the asset, use the vcn authenticate command:
+vcn authenticate &amp;lt;asset&amp;gt; Authenticate with a specific signerID with vcn # Using signerID:
+vcn authenticate --signerID &amp;lt;signerID&amp;gt; &amp;lt;asset&amp;gt; Authenticate multiple assets with vcn # To
+ls | xargs vcn authenticate </description>
     </item>
     
     <item>
@@ -84,36 +72,84 @@ Usage: vcn authenticate [flags] ARG(s) Aliases: authenticate, a, verify, v Examp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/140_bom_authentication/</guid>
-      <description>Add attachmentments to notarization transaction with vcn To add attachments containing different types of supporting documentation to a notarization transaction:
+      <description>Add attachmentments to notarization transaction with vcn # To add attachments containing different types of supporting documentation to a notarization transaction:
 vcn n artifact --attach attachment1:label1 --attach attachment2:label1 --attach attachment3:label2 TODO.
-Resolving dependencies with vcn To
-vcn bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Authenticating an asset&amp;rsquo;s BOM with vcn To
-vcn a --bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Notarizing an asset&amp;rsquo;s BOM with vcn To
-vcn n --bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Alternative output formats with vcn To work with individual dependencies:</description>
+Resolving dependencies with vcn # To
+vcn bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Authenticating an asset&amp;rsquo;s BOM with vcn # To
+vcn a --bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Notarizing an asset&amp;rsquo;s BOM with vcn # To</description>
     </item>
     
     <item>
-      <title>Securing Dependencies with Trustcenter</title>
+      <title>Working with Dependencies</title>
       <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/150_dependencies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/150_dependencies/</guid>
-      <description>Looking up known dependencies with vcn To
-vcn a --bom-what-includes (&amp;lt;scheme&amp;gt;://&amp;lt;name&amp;gt;@&amp;lt;version&amp;gt; | --hash &amp;lt;hash&amp;gt;) Container support with vcn To
-vcn &amp;lt;command&amp;gt; &amp;lt;scheme&amp;gt;://&amp;lt;image_or_container&amp;gt; [command options] Supported schemes:
+      <description>Looking up known dependencies with vcn # To
+vcn a --bom-what-includes (&amp;lt;scheme&amp;gt;://&amp;lt;name&amp;gt;@&amp;lt;version&amp;gt; | --hash &amp;lt;hash&amp;gt;) Container support with vcn # To
+vcn &amp;lt;command&amp;gt; &amp;lt;scheme&amp;gt;://&amp;lt;image_or_container&amp;gt; [command options] TODO:
+Supported schemes:
 docker: Docker image ID or tag, requires running docker deamon container container: Docker container ID or tag, requires running docker deamon image image: container image in container registry. URL format: image://[&amp;lt;registry_server&amp;gt;/]image_tag. If &amp;lt;registry_server&amp;gt; is not specified, Docker Hub is used. By default vcn tries to connect to the registry using active Docker session, however users can always override it by using image-registry-user/image-registry-password CLI parameters.</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/999_extras/</link>
+      <title>Authenticating Dependencies</title>
+      <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/160_authenticating_dependencies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/999_extras/</guid>
-      <description>Authenticate multiple assets with vcn To
-ls | xargs vcn authenticate Authenticate with a specific signerID with vcn To
-vcn authenticate --signerID identityname docker://hello-world Authenticating Trusted Dependencies If we attempt to authenticate a Docker image which has not yet been notarized with our signing key, we receive a warning that the asset hasn&amp;rsquo;t yet been notarized:
-❯ vcn authenticate --bom docker://python:3.9-alpine Warning: c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf was not notarized When we then notarize the image, all of its dependencies are resolved, authenticated with Trustcenter, signed, and marked as Trusted:</description>
+      <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/160_authenticating_dependencies/</guid>
+      <description>Authenticating Trusted Dependencies # If we attempt to authenticate a Docker image which has not yet been notarized with our signing key, we receive a warning that the asset hasn&amp;rsquo;t yet been notarized:
+❯ vcn authenticate --bom docker://python:3.9-alpine Warning: c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf was not notarized When we then notarize the image, all of its dependencies are resolved, authenticated with Trustcenter, signed, and marked as Trusted:
+❯ vcn notarize --bom image://python:3.9-alpine Your assets will not be uploaded.</description>
+    </item>
+    
+    <item>
+      <title>Working with Other Tools</title>
+      <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/190_other_tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/190_other_tools/</guid>
+      <description>Exchanging Data with Other Tools # Import from spfx and cyclonedx # TODO.
+Export to spfx or cyclonedx # TODO.</description>
+    </item>
+    
+    <item>
+      <title>Intro to Trustcenter</title>
+      <link>http://nickanderegg.github.io/sbom-guide/30_trustcenter/310_intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/30_trustcenter/310_intro/</guid>
+      <description>SBOMs with Codenotary Trustcenter # Creating SBOMs using Trustcenter # TODO.
+Searching with Trustcenter # TODO.</description>
+    </item>
+    
+    <item>
+      <title>Intro to CAS</title>
+      <link>http://nickanderegg.github.io/sbom-guide/40_cas/410_intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/40_cas/410_intro/</guid>
+      <description>About Codenotary&amp;rsquo;s Community Attestation Service # TODO.
+Using CAS to Notarize and Authenticate # TODO: Intro.
+cas CLI Quickstart # # Get API key from: https://cas.codenotary.com # Get CAS: https://github.com/codenotary/cas/releases # Login export CAS_API_KEY=YOUR_API_KEY; cas login ## Create and sign a Software Bill of Materials cas notarize --bom docker://ubuntu ## Verify and authenticate assets with signing key cas authenticate --bom docker://ubuntu Summary of Functionality # TODO: Brief listing of all functionality.</description>
+    </item>
+    
+    <item>
+      <title>Notarize</title>
+      <link>http://nickanderegg.github.io/sbom-guide/90_reference/glossary/notarize/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/90_reference/glossary/notarize/</guid>
+      <description> Notarize (definition) # </description>
+    </item>
+    
+    <item>
+      <title>Searching for Vulnerabilities</title>
+      <link>http://nickanderegg.github.io/sbom-guide/80_examples/vulnerability_search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/80_examples/vulnerability_search/</guid>
+      <description> Searching for Vulnerabilities with Trustcenter # </description>
     </item>
     
   </channel>

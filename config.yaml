@@ -6,6 +6,7 @@ theme: hugo-book
 # Book configuration
 disablePathToLower: true
 enableGitInfo: true
+publishDir: docs
 
 params:
   # (Optional, default light) Sets color theme: light, dark or auto.

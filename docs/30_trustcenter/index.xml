@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codenotary Trustcenter on Developer&#39;s Guide to SBOMs</title>
+    <link>http://nickanderegg.github.io/sbom-guide/30_trustcenter/</link>
+    <description>Recent content in Codenotary Trustcenter on Developer&#39;s Guide to SBOMs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/30_trustcenter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro to Trustcenter</title>
+      <link>http://nickanderegg.github.io/sbom-guide/30_trustcenter/310_intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/30_trustcenter/310_intro/</guid>
+      <description>SBOMs with Codenotary Trustcenter # Creating SBOMs using Trustcenter # TODO.
+Searching with Trustcenter # TODO.</description>
+    </item>
+    
+  </channel>
+</rss>

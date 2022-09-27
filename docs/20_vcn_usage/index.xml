@@ -12,8 +12,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/110_vcn_intro/</guid>
-      <description>Specifying Assets in vcn Commands Throughout this documentation, you&amp;rsquo;ll see the placeholder &amp;lt;artifact&amp;gt; used to refer to an asset that you want to authenticate or notarize. For example:
+      <description>Specifying Assets in vcn Commands # Throughout this documentation, you&amp;rsquo;ll see the placeholder &amp;lt;artifact&amp;gt; used to refer to an asset that you want to authenticate or notarize. For example:
 vcn authenticate &amp;lt;artifact&amp;gt; The asset referred to by the &amp;lt;artifact&amp;gt; placeholder can be a file, directory, image, or git repository. The following are examples of how to specify an asset, where COMMAND is a placeholder for any vcn command that accepts an asset as an argument:</description>
+    </item>
+    
+    <item>
+      <title>vcn Cheatsheet</title>
+      <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/115_vcn_cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/115_vcn_cheatsheet/</guid>
+      <description> vcn Cheatsheet # </description>
     </item>
     
     <item>
@@ -22,10 +31,9 @@ vcn authenticate &amp;lt;artifact&amp;gt; The asset referred to by the &amp;lt;a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/120_notarizing_assets/</guid>
-      <description>Notarize an asset with vcn To notarize an asset:
+      <description>Notarize an asset with vcn # To notarize an asset:
 vcn notarize &amp;lt;artifact&amp;gt; Passing the --bom flag to the vcn notarize command will notarize the asset&amp;rsquo;s dependencies and immutably associate them with the asset in Trustcenter:
-vcn notarize --bom &amp;lt;artifact&amp;gt; If you need to notarize assets in bulk, you can supply a CSV file that enumerates the hash, name, and labels of each asset to the vcn notarize command:
-vcn notarize --import-file &amp;lt;csv_file&amp;gt; The contents of your CSV file should follow the format</description>
+vcn notarize --bom &amp;lt;artifact&amp;gt; If you need to notarize assets in bulk, you can supply a CSV file that enumerates the hash, name, and labels of each asset to the vcn notarize command:</description>
     </item>
     
     <item>
@@ -34,8 +42,10 @@ vcn notarize --import-file &amp;lt;csv_file&amp;gt; The contents of your CSV fil
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/130_authenticating_assets/</guid>
-      <description>Authenticate asset with vcn To authenticate an asset with Trustcenter, which verifies the integrity and signature of the asset, use the vcn authenticate command:
-Usage: vcn authenticate [flags] ARG(s) Aliases: authenticate, a, verify, v Examples: vcn authenticate /bin/vcn Flags: --attach string authenticate an artifact on a specific attachment label. With this it&amp;#39;s be possible to retrieve the specific attachment with: vcn a binary1 --attach=vscanner.result:jobid123 --output=attachments or to get all attachments for a label: vcn a binary1 --attach=jobid123 --output=attachments --bom link asset to its dependencies from BOM --bom-batch-size uint by default BOM dependencies are authenticated/notarized in batches of up to 100 dependencies each.</description>
+      <description> Authenticating Assets with Trustcenter # Using vcn to authenticate an asset # To authenticate an asset with Trustcenter, which verifies the integrity and signature of the asset, use the vcn authenticate command:
+vcn authenticate &amp;lt;asset&amp;gt; Authenticate with a specific signerID with vcn # Using signerID:
+vcn authenticate --signerID &amp;lt;signerID&amp;gt; &amp;lt;asset&amp;gt; Authenticate multiple assets with vcn # To
+ls | xargs vcn authenticate </description>
     </item>
     
     <item>
@@ -44,36 +54,45 @@ Usage: vcn authenticate [flags] ARG(s) Aliases: authenticate, a, verify, v Examp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/140_bom_authentication/</guid>
-      <description>Add attachmentments to notarization transaction with vcn To add attachments containing different types of supporting documentation to a notarization transaction:
+      <description>Add attachmentments to notarization transaction with vcn # To add attachments containing different types of supporting documentation to a notarization transaction:
 vcn n artifact --attach attachment1:label1 --attach attachment2:label1 --attach attachment3:label2 TODO.
-Resolving dependencies with vcn To
-vcn bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Authenticating an asset&amp;rsquo;s BOM with vcn To
-vcn a --bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Notarizing an asset&amp;rsquo;s BOM with vcn To
-vcn n --bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Alternative output formats with vcn To work with individual dependencies:</description>
+Resolving dependencies with vcn # To
+vcn bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Authenticating an asset&amp;rsquo;s BOM with vcn # To
+vcn a --bom &amp;lt;asset&amp;gt; [bom options] [bom output options] Notarizing an asset&amp;rsquo;s BOM with vcn # To</description>
     </item>
     
     <item>
-      <title>Securing Dependencies with Trustcenter</title>
+      <title>Working with Dependencies</title>
       <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/150_dependencies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/150_dependencies/</guid>
-      <description>Looking up known dependencies with vcn To
-vcn a --bom-what-includes (&amp;lt;scheme&amp;gt;://&amp;lt;name&amp;gt;@&amp;lt;version&amp;gt; | --hash &amp;lt;hash&amp;gt;) Container support with vcn To
-vcn &amp;lt;command&amp;gt; &amp;lt;scheme&amp;gt;://&amp;lt;image_or_container&amp;gt; [command options] Supported schemes:
+      <description>Looking up known dependencies with vcn # To
+vcn a --bom-what-includes (&amp;lt;scheme&amp;gt;://&amp;lt;name&amp;gt;@&amp;lt;version&amp;gt; | --hash &amp;lt;hash&amp;gt;) Container support with vcn # To
+vcn &amp;lt;command&amp;gt; &amp;lt;scheme&amp;gt;://&amp;lt;image_or_container&amp;gt; [command options] TODO:
+Supported schemes:
 docker: Docker image ID or tag, requires running docker deamon container container: Docker container ID or tag, requires running docker deamon image image: container image in container registry. URL format: image://[&amp;lt;registry_server&amp;gt;/]image_tag. If &amp;lt;registry_server&amp;gt; is not specified, Docker Hub is used. By default vcn tries to connect to the registry using active Docker session, however users can always override it by using image-registry-user/image-registry-password CLI parameters.</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/999_extras/</link>
+      <title>Authenticating Dependencies</title>
+      <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/160_authenticating_dependencies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/999_extras/</guid>
-      <description>Authenticate multiple assets with vcn To
-ls | xargs vcn authenticate Authenticate with a specific signerID with vcn To
-vcn authenticate --signerID identityname docker://hello-world Authenticating Trusted Dependencies If we attempt to authenticate a Docker image which has not yet been notarized with our signing key, we receive a warning that the asset hasn&amp;rsquo;t yet been notarized:
-❯ vcn authenticate --bom docker://python:3.9-alpine Warning: c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf was not notarized When we then notarize the image, all of its dependencies are resolved, authenticated with Trustcenter, signed, and marked as Trusted:</description>
+      <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/160_authenticating_dependencies/</guid>
+      <description>Authenticating Trusted Dependencies # If we attempt to authenticate a Docker image which has not yet been notarized with our signing key, we receive a warning that the asset hasn&amp;rsquo;t yet been notarized:
+❯ vcn authenticate --bom docker://python:3.9-alpine Warning: c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf was not notarized When we then notarize the image, all of its dependencies are resolved, authenticated with Trustcenter, signed, and marked as Trusted:
+❯ vcn notarize --bom image://python:3.9-alpine Your assets will not be uploaded.</description>
+    </item>
+    
+    <item>
+      <title>Working with Other Tools</title>
+      <link>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/190_other_tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/20_vcn_usage/190_other_tools/</guid>
+      <description>Exchanging Data with Other Tools # Import from spfx and cyclonedx # TODO.
+Export to spfx or cyclonedx # TODO.</description>
     </item>
     
   </channel>
