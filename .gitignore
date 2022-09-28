@@ -1,6 +1,10 @@
 # Hugo generated directories
 resources/_gen/
 
+# vscode
+
+*.code-workspace
+
 # General
 .DS_Store
 .AppleDouble
