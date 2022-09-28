@@ -4,6 +4,10 @@ weight: 110
 draft: false
 ---
 
+# Introduction to `vcn`
+
+`vcn` is a command line tool that allows you to interact with Codenotary Trustcenter to notarize and authenticate your software assets. This documentation will guide you through the various ways you can use `vcn` to help manage the security of your software.
+
 ## Specifying Assets in `vcn` Commands
 
 Throughout this documentation, you'll see the placeholder `<artifact>` used to refer to an asset that you want to authenticate or notarize. For example:

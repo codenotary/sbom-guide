@@ -2,7 +2,7 @@
 weight: 310
 title: Intro to Trustcenter
 bookFlatSection: true
-draft: false
+draft: true
 ---
 
 # SBOMs with Codenotary Trustcenter

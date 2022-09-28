@@ -1,7 +1,7 @@
 ---
 weight: 410
 title: Intro to CAS
-draft: false
+draft: true
 ---
 
 ## About Codenotary's Community Attestation Service
