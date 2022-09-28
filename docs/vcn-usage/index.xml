@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction on Developer&#39;s Guide to SBOMs</title>
-    <link>http://nickanderegg.github.io/sbom-guide/</link>
-    <description>Recent content in Introduction on Developer&#39;s Guide to SBOMs</description>
+    <title>Using vcn with Trustcenter on Developer&#39;s Guide to SBOMs</title>
+    <link>http://nickanderegg.github.io/sbom-guide/vcn-usage/</link>
+    <description>Recent content in Using vcn with Trustcenter on Developer&#39;s Guide to SBOMs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/vcn-usage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to VCN</title>
       <link>http://nickanderegg.github.io/sbom-guide/vcn-usage/intro/</link>
@@ -88,24 +88,6 @@ vcn notarize|untrust|unsupport [command options ...] --bom-cascade [--bom-force]
       <guid>http://nickanderegg.github.io/sbom-guide/vcn-usage/bom-interoperability/</guid>
       <description>Exchanging Data with Other Tools # Import from spfx and cyclonedx # TODO.
 Export to spfx or cyclonedx # TODO.</description>
-    </item>
-    
-    <item>
-      <title>Notarize</title>
-      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/notarize/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/notarize/</guid>
-      <description> Notarize (definition) # </description>
-    </item>
-    
-    <item>
-      <title>Searching for Vulnerabilities</title>
-      <link>http://nickanderegg.github.io/sbom-guide/examples/vulnerability-search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/examples/vulnerability-search/</guid>
-      <description> Searching for Vulnerabilities with Trustcenter # </description>
     </item>
     
   </channel>
