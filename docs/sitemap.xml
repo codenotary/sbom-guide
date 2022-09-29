@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://nickanderegg.github.io/sbom-guide/sbom-intro/</loc>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/sbom-intro/sbom-concepts/</loc>
+  </url><url>
     <loc>http://nickanderegg.github.io/sbom-guide/vcn-usage/</loc>
     <lastmod>2022-09-27T22:55:14-04:00</lastmod>
   </url><url>

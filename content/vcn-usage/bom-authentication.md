@@ -27,7 +27,7 @@ vcn bom image://python:3.10-alpine
 
 Output:
 
-```bash
+```console
 :	alpine-baselayout-data@3.2.0-r22
 :	musl@1.2.3-r0
 :	busybox@1.35.0-r17
