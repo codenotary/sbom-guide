@@ -1,10 +1,10 @@
 ---
-weight: 20
-title: SPDX
+weight: 30
+title: SPDX Documents
 draft: false
 ---
 
-# SPDX SBOM Format
+# Documenting Software Artifacts with SBOMs
 
 The Software Package Data Exchange (SPDX) specifications are open standards for communicating software bill of materials (SBOM) information.
 
