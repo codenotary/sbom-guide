@@ -40,20 +40,26 @@ Tools such as [Syft](https://github.com/anchore/syft) and CodeNotary's [`cas` CL
 
 ## Why does this matter?
 
-[WIP]
+To quote President Biden's [Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) on *Improving the Nation’s Cybersecurity*:
 
-- Federal mandate
-- Mitigating vulnerabilities
-- Transparency
+> [T]he trust we place in our digital infrastructure should be proportional to how trustworthy and transparent that infrastructure is, and to the consequences we will incur if that trust is misplaced.
+
+This order calls for transparency in the software supply chain, and SBOMs are a key part of that transparency. Notably, the policies laid out in this order will require vendors to provide SBOMs for all software they sell to the federal government, which will result in more vendors requesting SBOMs from their upstream suppliers.
+
+The tooling and standards for SBOMs are continuing to mature, and as it becomes increasingly important for developers of both proprietary and open source software to generate SBOMs for their projects, the integration of SBOMs into software development workflows will become more widespread. A [pilot program created by the above order](https://www.whitehouse.gov/briefing-room/statements-releases/2021/05/12/fact-sheet-president-signs-executive-order-charting-new-course-to-improve-the-nations-cybersecurity-and-protect-federal-government-networks/) shows the potential for how SBOMs can be used to communicate the security posture of software products (emphasis added):
+
+> [The executive order] creates a pilot program to create an “energy star” type of label so the government – and the public at large – can quickly determine whether software was developed securely. Too much of our software, including critical software, is shipped with significant vulnerabilities that our adversaries exploit. This is a long-standing, well-known problem, but for too long we have kicked the can down the road. **We need to use the purchasing power of the Federal Government to drive the market to build security into all software from the ground up.**
+
+If you are a software developer or DevOps engineer, you should be aware of SBOMs and their applications. Even if you are not *yet* required to provide SBOMs for your projects, you can still benefit from the transparency and integrity they provide to the software supply chain.
 
 ## What information is included in an SBOM?
 
-[WIP]
+A software bill of materials is typically structured according to an interchange format for SBOMs, such as SPDX or CycloneDX. The information architecture of an SBOM varies depending on the tool that is used to generate it, as well as the purpose of the SBOM and the needs of downstream consumers, but the basic set of properties is generally consistent between formats.
 
 {{< hint info >}}
 **Baseline Component Information**
 
-The "baseline component information" of an SBOM, according to [*Software Bill of Materials Elements and Considerations*](https://www.federalregister.gov/documents/2021/06/02/2021-11592/software-bill-of-materials-elements-and-considerations) by the National Telecommunications and Information Administration, US Department of Commerce:
+The "baseline component information" of an SBOM, according to [*Software Bill of Materials Elements and Considerations*](https://www.federalregister.gov/documents/2021/06/02/2021-11592/software-bill-of-materials-elements-and-considerations) by the NTIA:
 
 - Supplier name
 - Component name
@@ -65,9 +71,15 @@ The "baseline component information" of an SBOM, according to [*Software Bill of
 
 {{< /hint >}}
 
-TODO: Brief explanations of how the unique identification of a component is made.
+An SBOM should include information that uniquely associates it with the software artifact it describes, typically the name and version identifier of the asset, along with a cryptographic hash of the files that constitute the asset. Beyond that, to be used in any sort of meaningful way, an SBOM should include information about the relationship between the asset and its dependencies.
 
-## SBOM Formats
+## What is the "relationship" between an asset and its dependencies?
+
+Although the relationship between a project and its dependencies generally refers to which components are included in a piece of software, the relationships between two components in an SBOM can be defined in any number of ways that describe various points in the creation of an artifact.
+
+For example, the SPDX specification not only provides a mechanism for defining relations such as `DEPENDS_ON` and `RUNTIME_DEPENDENCY_OF`, but also allows for defining relationships with the `DOCUMENTATION_OF` a project or the `BUILD_TOOL_OF` of a given build artifact.
+
+## How are SBOMs communicated?
 
 [WIP]
 
