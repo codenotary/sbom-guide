@@ -7,14 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Introduction</title>
+      <link>http://nickanderegg.github.io/sbom-guide/sbom-intro/sbom-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/sbom-intro/sbom-intro/</guid>
+      <description>Introduction to Software Bills of Materials (SBOMs) # A Software Bill of Materials (SBOM) is a manifest which uniquely identifies and enumerates the software dependencies contained within a codebase, build artifact, or runtime container. A dynamic SBOM can further integrate information from vulnerability scanners to help ensure the integrity of your software supply chain.
+What is motivating the need for SBOMs? # To quote President Biden&amp;rsquo;s Executive Order 14028 on Improving the Nation’s Cybersecurity:</description>
+    </item>
+    
+    <item>
       <title>SBOM Concepts</title>
       <link>http://nickanderegg.github.io/sbom-guide/sbom-intro/sbom-concepts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/sbom-intro/sbom-concepts/</guid>
-      <description>SBOM Concepts # A Software Bill of Materials (SBOM) is a manifest which uniquely identifies and enumerates the software dependencies contained within a codebase, build artifact, or runtime container.
-A provider that offers &amp;ldquo;dynamic&amp;rdquo; SBOMs can further integrate information from vulnerability scanners to help ensure software that is known to be unsafe is not deployed.
-When the dependencies of a software asset are enumerated in an SBOM, it becomes possible to track where artifacts are deployed when new vulnerabilities are discovered.</description>
+      <description>SBOM Concepts # Improving Transparency # When the dependencies of a software asset are enumerated in an SBOM, it becomes possible to track where artifacts are deployed when new vulnerabilities are discovered. This is especially useful when the SBOM is stored in a searchable database (such as Codenotary Trustcenter).
+A software bill of materials is an important part of software supply chain security, because it surfaces the various artifacts that are bundled with a given software asset and enables developers to quickly identify and remove vulnerable components.</description>
+    </item>
+    
+    <item>
+      <title>SPDX Documents</title>
+      <link>http://nickanderegg.github.io/sbom-guide/sbom-intro/spdx-documents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/sbom-intro/spdx-documents/</guid>
+      <description>Documenting Software Artifacts with SBOMs # The Software Package Data Exchange (SPDX) Specification is an open standard for communicating software bill of materials (SBOM) information.
+SPDX is an initiative of the Linux Foundation created to develop tools and formats for communicating the licensing information of software packages. Most developers have probably already encountered one specification from SPDX in the form of the SPDX License List, which is &amp;ldquo;a list of commonly found licenses and exceptions used for open source and other collaborative software.</description>
+    </item>
+    
+    <item>
+      <title>Software Security</title>
+      <link>http://nickanderegg.github.io/sbom-guide/sbom-intro/supply-chain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/sbom-intro/supply-chain/</guid>
+      <description>Increasing the Security of Software # Definitions # Notarization or Signing is the process of creating a cryptographic signature of a software asset and, optionally, storing it in a cryptographically-verifiable immutable ledger. The signature can then be used to verify the integrity of the asset and authenticate its chain of custody.
+Authentication is the process of verifying the integrity of a software asset by comparing its unique hash with a hash signed by a known trusted signer identity.</description>
     </item>
     
     <item>
