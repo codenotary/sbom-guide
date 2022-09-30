@@ -6,7 +6,7 @@ draft: false
 
 # Documenting Software Artifacts with SBOMs
 
-The Software Package Data Exchange (SPDX) specifications are open standards for communicating software bill of materials (SBOM) information.
+The Software Package Data Exchange (SPDX) Specification is an open standard for communicating software bill of materials (SBOM) information.
 
 SPDX is an initiative of the Linux Foundation created to develop tools and formats for communicating the licensing information of software packages. Most developers have probably already encountered one specification from SPDX in the form of the SPDX License List, which is "a list of commonly found licenses and exceptions used for open source and other collaborative software." If you've defined a license in a Node project's `package.json` file or a Python project's `pyproject.toml` file, you've already interacted with a core component of an SPDX SBOM.
 
