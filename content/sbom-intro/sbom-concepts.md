@@ -38,20 +38,6 @@ Tools such as [Syft](https://github.com/anchore/syft) and CodeNotary's [`cas` CL
 
 **Authentication** is the process of verifying the integrity of a software asset by comparing its unique hash with a hash signed by a known trusted signer identity. Authentication is critical for tracking the provenance of software assets and ensuring that they have not been tampered with.
 
-## Why does this matter?
-
-To quote President Biden's [Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) on *Improving the Nation’s Cybersecurity*:
-
-> [T]he trust we place in our digital infrastructure should be proportional to how trustworthy and transparent that infrastructure is, and to the consequences we will incur if that trust is misplaced.
-
-This order calls for transparency in the software supply chain, and SBOMs are a key part of that transparency. Notably, the policies laid out in this order will require vendors to provide SBOMs for all software they sell to the federal government, which will result in more vendors requesting SBOMs from their upstream suppliers.
-
-The tooling and standards for SBOMs are continuing to mature, and as it becomes increasingly important for developers of both proprietary and open source software to generate SBOMs for their projects, the integration of SBOMs into software development workflows will become more widespread. A [pilot program created by the above order](https://www.whitehouse.gov/briefing-room/statements-releases/2021/05/12/fact-sheet-president-signs-executive-order-charting-new-course-to-improve-the-nations-cybersecurity-and-protect-federal-government-networks/) shows the potential for how SBOMs can be used to communicate the security posture of software products (emphasis added):
-
-> [The executive order] creates a pilot program to create an “energy star” type of label so the government – and the public at large – can quickly determine whether software was developed securely. Too much of our software, including critical software, is shipped with significant vulnerabilities that our adversaries exploit. This is a long-standing, well-known problem, but for too long we have kicked the can down the road. **We need to use the purchasing power of the Federal Government to drive the market to build security into all software from the ground up.**
-
-If you are a software developer or DevOps engineer, you should be aware of SBOMs and their applications. Even if you are not *yet* required to provide SBOMs for your projects, you can still benefit from the transparency and integrity they provide to the software supply chain.
-
 ## What information is included in an SBOM?
 
 A software bill of materials is typically structured according to an interchange format for SBOMs, such as SPDX or CycloneDX. The information architecture of an SBOM varies depending on the tool that is used to generate it, as well as the purpose of the SBOM and the needs of downstream consumers, but the basic set of properties is generally consistent between formats.
