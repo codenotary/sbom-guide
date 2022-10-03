@@ -42,8 +42,8 @@ SPDX is an initiative of the Linux Foundation created to develop tools and forma
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nickanderegg.github.io/sbom-guide/sbom-intro/supply-chain/</guid>
-      <description>Increasing the Security of Software # Definitions # Notarization or Signing is the process of creating a cryptographic signature of a software asset and, optionally, storing it in a cryptographically-verifiable immutable ledger. The signature can then be used to verify the integrity of the asset and authenticate its chain of custody.
-Authentication is the process of verifying the integrity of a software asset by comparing its unique hash with a hash signed by a known trusted signer identity.</description>
+      <description>Increasing the Security of Software # When it comes to using SBOMs to keep software secure, there are two main use cases:
+Identifying vulnerable components. By enumerating the components contained in a given software artifact, you can identify which components deployed on your infrastructure are vulnerable to known explots. Ensuring the integrity of software components. Likewise, ensuring the integrity of your build artifacts requires keep records that uniquely identify an asset and its provenance.</description>
     </item>
     
   </channel>

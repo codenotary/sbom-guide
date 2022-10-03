@@ -17,9 +17,9 @@ This process creates a chain of custody for the asset and its dependencies, allo
 <title>Authenticating SBOMs | Developer&#39;s Guide to SBOMs</title>
 <link rel="manifest" href="/sbom-guide/manifest.json">
 <link rel="icon" href="/sbom-guide/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/sbom-guide/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/sbom-guide/book.min.6bc240c5f2772bbf292d71ebecdd834f8eef2cf9fa07674b079fe2698f0915c9.css" integrity="sha256-a8JAxfJ3K78pLXHr7N2DT47vLPn6B2dLB5/iaY8JFck=" crossorigin="anonymous">
   <script defer src="/sbom-guide/flexsearch.min.js"></script>
-  <script defer src="/sbom-guide/en.search.min.6aa6e20269841e38cc1d69a3171874583c1b0364c96dcc409f7a44b94834707a.js" integrity="sha256-aqbiAmmEHjjMHWmjFxh0WDwbA2TJbcxAn3pEuUg0cHo=" crossorigin="anonymous"></script>
+  <script defer src="/sbom-guide/en.search.min.86038800eec8f7c787edfb5a7c241dcbcb88b20b2c95d1899351bf4fb24c7921.js" integrity="sha256-hgOIAO7I98eH7ftafCQdy8uIsgssldGJk1G/T7JMeSE=" crossorigin="anonymous"></script>
 
   <script defer src="/sbom-guide/sw.min.7e5d3d741a2cbe5d2c6c4f16e894e371d828f808c9041b41247360eafd51962a.js" integrity="sha256-fl09dBosvl0sbE8W6JTjcdgo&#43;AjJBBtBJHNg6v1Rlio=" crossorigin="anonymous"></script>
 <!--
@@ -377,9 +377,13 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#resolving-dependencies-with-vcn">Resolving dependencies with <code>vcn</code></a></li>
-    <li><a href="#notarizing-an-artifacts-bill-of-materials">Notarizing an artifact&rsquo;s bill of materials</a></li>
-    <li><a href="#authenticating-an-artifacts-bill-of-materials">Authenticating an artifact&rsquo;s bill of materials</a></li>
+    <li><a href="#notarizing-and-authenticating-software-bills-of-materials-sboms-with-trustcenter">Notarizing and Authenticating Software Bills of Materials (SBOMs) with Trustcenter</a>
+      <ul>
+        <li><a href="#resolving-dependencies-with-vcn">Resolving dependencies with <code>vcn</code></a></li>
+        <li><a href="#notarizing-an-artifacts-bill-of-materials">Notarizing an artifact&rsquo;s bill of materials</a></li>
+        <li><a href="#authenticating-an-artifacts-bill-of-materials">Authenticating an artifact&rsquo;s bill of materials</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -467,8 +471,18 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Short form of command:</span>
 </span></span><span style="display:flex;"><span>vcn a --bom &lt;artifact&gt;
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</span></span></code></pre></div><!-- ## Alternative output formats with `vcn`
+
+To work with individual dependencies:
+
+```bash
+vcn a|n|ut|us <scheme>://<name>@<version> | --hash <hash>
+
+# Alternative flags:
+# --bom-spdx
+# --bom-cdx-json
+# --bom-cdx-xml
+``` -->
 </article>
  
       
@@ -510,9 +524,13 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#resolving-dependencies-with-vcn">Resolving dependencies with <code>vcn</code></a></li>
-    <li><a href="#notarizing-an-artifacts-bill-of-materials">Notarizing an artifact&rsquo;s bill of materials</a></li>
-    <li><a href="#authenticating-an-artifacts-bill-of-materials">Authenticating an artifact&rsquo;s bill of materials</a></li>
+    <li><a href="#notarizing-and-authenticating-software-bills-of-materials-sboms-with-trustcenter">Notarizing and Authenticating Software Bills of Materials (SBOMs) with Trustcenter</a>
+      <ul>
+        <li><a href="#resolving-dependencies-with-vcn">Resolving dependencies with <code>vcn</code></a></li>
+        <li><a href="#notarizing-an-artifacts-bill-of-materials">Notarizing an artifact&rsquo;s bill of materials</a></li>
+        <li><a href="#authenticating-an-artifacts-bill-of-materials">Authenticating an artifact&rsquo;s bill of materials</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
