@@ -1,3 +1,32 @@
 /* You can add custom styles here. */
 
 // @import "plugins/numbered";
+
+dl.q-and-a {
+  dt {
+    font-weight: bold;
+    // display: inline;
+  }
+
+  dt:has(+dt) {
+    line-height: 1.15;
+    &::after {
+      content: ", and";
+      font-weight: normal;
+      font-style: italic;
+    }
+  }
+
+  dt + dt {
+    margin-top: 0.25rem;
+  }
+
+  dt:has(+dd) {
+    line-height: 1.15;
+  }
+
+  dd {
+    margin: 1em;
+  }
+
+}
