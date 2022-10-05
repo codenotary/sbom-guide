@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.104.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content="Developer&rsquo;s Guide to SBOMs # Most modern applications are built atop a growing library of open-source and proprietary components; it would be tedious and time-consuming to manually identify each component, evaluate the components&rsquo; dependencies, and determine if those components are then suitable for inclusion in the project.
+Instead, automated software can assemble a Software Bill of Materials (SBOM) for each release artifact at some point in the build pipeline, when dependency and build information is readily available.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Developer&#39;s Guide to SBOMs" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Main Page" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://nickanderegg.github.io/sbom-guide/" />
 
-<title>Developer&#39;s Guide to SBOMs | Developer&#39;s Guide to SBOMs</title>
+<title>Main Page | Developer&#39;s Guide to SBOMs</title>
 <link rel="manifest" href="/sbom-guide/manifest.json">
 <link rel="icon" href="/sbom-guide/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/sbom-guide/book.min.3d3965ab8128c8a947d1e03f5b62b323005c10cfc9bc270cd451db1ee6f0c989.css" integrity="sha256-PTllq4EoyKlH0eA/W2KzIwBcEM/JvCcM1FHbHubwyYk=" crossorigin="anonymous">
@@ -71,7 +71,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/sbom-guide/" class="">Main Page</a>
+    <a href="/sbom-guide/" class="active">Main Page</a>
   
 
           
@@ -377,7 +377,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/sbom-guide/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Developer&#39;s Guide to SBOMs</strong>
+  <strong>Main Page</strong>
 
   <label for="toc-control">
     
@@ -391,7 +391,17 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#developers-guide-to-sboms">Developer&rsquo;s Guide to SBOMs</a>
+      <ul>
+        <li><a href="#why-sboms">Why SBOMs?</a></li>
+        <li><a href="#why-does-this-matter-to-me">Why does this matter to me?</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -403,7 +413,47 @@ https://github.com/alex-shpak/hugo-book
       
       
       
-  <article class="markdown"></article>
+  <article class="markdown"><h1 id="developers-guide-to-sboms">
+  Developer&rsquo;s Guide to SBOMs
+  <a class="anchor" href="#developers-guide-to-sboms">#</a>
+</h1>
+<p>Most modern applications are built atop a growing library of open-source and proprietary components; it would be tedious and time-consuming to manually identify each component, evaluate the components&rsquo; dependencies, and determine if those components are then suitable for inclusion in the project.</p>
+<p>Instead, automated software can assemble a Software Bill of Materials (SBOM) for each release artifact at some point in the build pipeline, when dependency and build information is readily available.</p>
+<blockquote class="book-hint info">
+  <p><strong>Definition of <em>Software Bill of Materials</em></strong></p>
+<p>A <strong><dfn title="software bill of materials">Software Bill of Materials (<abbr title="software bill of materials">SBOM</abbr>)</dfn></strong> is a manifest which uniquely identifies and enumerates the software dependencies contained within a codebase, build artifact, or runtime container.</p>
+
+</blockquote>
+
+<h2 id="why-sboms">
+  Why SBOMs?
+  <a class="anchor" href="#why-sboms">#</a>
+</h2>
+<p>The SBOM is a mechanism to share build-time component inventories between projects and developers, and it serves as a fundamental tool for managing software supply chain integrity.</p>
+<p><strong>Without knowing what dependencies are included in a given third-party library, it&rsquo;s impossible to keep vulnerable components away from production.</strong> Likewise, without an inventory of the software running on your infrastructure, it&rsquo;s impossible to determine which components are affected after new vulnerabilities are discovered.</p>
+<h2 id="why-does-this-matter-to-me">
+  Why does this matter to me?
+  <a class="anchor" href="#why-does-this-matter-to-me">#</a>
+</h2>
+<p>If you are a software developer or DevOps engineer, you should be aware of SBOMs and their applications. Even if you are not <em>yet</em> required to provide SBOMs for your projects, you can still benefit from the transparency and integrity they provide to the software supply chain.</p>
+<h2 id="getting-started">
+  Getting Started
+  <a class="anchor" href="#getting-started">#</a>
+</h2>
+<div class="book-columns flex flex-wrap">
+
+  <div class="flex-even markdown-inner">
+    If you would like to better understand the SBOM concept, you can begin reading with the introduction of our 
+  <a href="http://nickanderegg.github.io/sbom-guide/sboms/sbom-intro/" title="Understanding SBOMs">Understanding SBOMs</a> guide.
+  </div>
+
+  <div class="flex-even markdown-inner">
+    If you would like to start using Codenotary Trustcenter to improve the security of your software supply chain, you can begin with&hellip;
+  </div>
+
+</div>
+
+</article>
  
       
       
@@ -429,6 +479,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -439,7 +493,17 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#developers-guide-to-sboms">Developer&rsquo;s Guide to SBOMs</a>
+      <ul>
+        <li><a href="#why-sboms">Why SBOMs?</a></li>
+        <li><a href="#why-does-this-matter-to-me">Why does this matter to me?</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  
