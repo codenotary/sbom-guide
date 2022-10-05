@@ -1,7 +1,7 @@
 ---
 title: Working with Dependencies
 weight: 150
-draft: false
+draft: true
 ---
 
 ## Looking up known dependencies with `vcn`
