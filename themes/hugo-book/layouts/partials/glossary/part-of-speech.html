@@ -1,0 +1,30 @@
+<!--
+  Partial to generate page name from Title or File name.
+  Accepts Page as context
+-->
+{{ $speechPart := "" }}
+{{ $paramPOS := lower .Params.partOfSpeech }}
+
+{{ if hasPrefix $paramPOS "v" }}
+  {{ $speechPart = "verb" }}
+{{ else if hasPrefix $paramPOS "n" }}
+  {{ $speechPart = "concept" }}
+{{ else if hasPrefix $paramPOS "prod" }}
+  {{ $speechPart = "product" }}
+{{ else if hasPrefix $paramPOS "conc" }}
+  {{ $speechPart = "concept" }}
+{{ else if hasPrefix $paramPOS "org" }}
+  {{ $speechPart = "organization" }}
+{{ else if hasPrefix $paramPOS "comp" }}
+  {{ $speechPart = "organization" }}
+{{ else if hasPrefix $paramPOS "sp" }}
+  {{ $speechPart = "specification" }}
+{{ else if hasPrefix $paramPOS "t" }}
+  {{ $speechPart = "tool" }}
+{{ else if hasPrefix $paramPOS "cli" }}
+  {{ $speechPart = "tool" }}
+{{ else if hasPrefix $paramPOS "service" }}
+  {{ $speechPart = "service" }}
+{{ end }}
+
+{{ return $speechPart }}

@@ -30,3 +30,163 @@ dl.q-and-a {
   }
 
 }
+
+.glossary-inline-title {
+  font-size: 1.1em;
+  // font-style: italic;
+}
+
+.glossary-inline-pos {
+  font-weight: lighter;
+  font-style: italic;
+  margin-left: 0.5em;
+}
+
+.glossary-entry-heading {
+  // font-size: 1.1em;
+  font-weight: bold;
+  // margin-bottom: 1em;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px 0px;
+  padding: 0.25em;
+  text-align: center;
+
+  .glossary-return-text, .glossary-return-link {
+    display: block;
+    // margin: 0;
+  }
+
+  .glossary-return-text {
+    font-size: 0.75em;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  a.glossary-return-link {
+    font-size: 1.1em;
+    &, &:hover, &:focus, &:active, &:visited {
+      text-decoration: none;
+      color: var(--body-font-color)
+    }
+  }
+}
+
+// .glossary-inline-abbr {
+//   &::before {
+//     content: " — ";
+//   }
+// }
+
+dl.glossary {
+
+  margin: 1em;
+  margin-top: 2em;
+
+  a {
+    &, &:hover, &:focus, &:active, &:visited {
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-decoration: black;
+    }
+  }
+
+  a:visited {
+    color: var(--body-font-color);
+  }
+
+  dt {
+    a {
+      color: var(--body-font-color);
+      font-weight: 600;
+    }
+  }
+
+  dd {
+    margin: 1em;
+    border-left: 1px dotted var(--color-link);
+    margin-left: 2em;
+    padding-left: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+article.glossary {
+
+  &.markdown > h1:first-child {
+    margin: 1em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    margin-top: 3em;
+    font-weight: thin;
+  }
+
+  .glossary-title-pos {
+    font-size: 1.1em;
+    text-align: center;
+    font-style:oblique;
+  }
+
+  .glossary-definition {
+    margin: 1em;
+    margin-top: 2em;
+    padding: 2em 1em;
+    border: black 1px;
+    border-style: solid none;
+  }
+}
+
+.glossary-synonyms {
+  // font-size: 1.1em;
+  font-style: italic;
+  margin-top: 1em;
+  padding-left: 1em;
+
+  // &::before {
+  //   content: "〉";
+  //   font-style: normal;
+  // }
+
+  .glossary-synonym-term {
+    font-weight: bold;
+    font-style: normal;
+
+    &::before {
+      content: " ";
+    }
+
+    &:has(+ .glossary-synonym-term) {
+      &::after {
+        content: ", ";
+        font-weight: normal;
+        font-style: italic;
+      }
+    }
+
+    &:first-of-type:has(+ .glossary-synonym-term:last-of-type) {
+      &::after {
+        content: " and ";
+        font-weight: normal;
+        font-style: italic;
+      }
+    }
+
+    & + .glossary-synonym-term:has(+ .glossary-synonym-term:last-of-type) {
+      &::after {
+        content: ", and ";
+        font-weight: normal;
+        font-style: italic;
+      }
+    }
+  }
+}

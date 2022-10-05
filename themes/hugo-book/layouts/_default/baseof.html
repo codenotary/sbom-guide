@@ -20,7 +20,11 @@
       </header>
 
       {{ partial "docs/inject/content-before" . }}
+      {{ if .Params.definedWord }}
+      {{ template "main-glossary" . }}
+      {{ else }}
       {{ template "main" . }} <!-- Page Content -->
+      {{ end }}
       {{ partial "docs/inject/content-after" . }}
 
       <footer class="book-footer">
@@ -75,6 +79,13 @@
 {{ define "main" }}
   <article class="markdown">
     {{- .Content -}}
+  </article>
+{{ end }}
+
+{{ define "main-glossary" }}
+  <article class="markdown glossary">
+    {{- partial "partials/glossary/definition-page" . -}}
+    {{/*  {{- .Content -}}  */}}
   </article>
 {{ end }}
 

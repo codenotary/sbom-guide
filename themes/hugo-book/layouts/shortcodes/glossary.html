@@ -1,0 +1,31 @@
+<dl class="glossary">
+{{ range .Page.Pages }}
+  <dt>
+    {{ if ne .Params.partOfSpeech "cli" }}
+    <a href="{{ .RelPermalink }}" class="glossary-inline-title">{{- partial "glossary/title" . -}}</a>
+    {{ else }}
+    <a href="{{ .RelPermalink }}" class="glossary-inline-title"><code>{{- partial "glossary/title" . -}}</code> Command</a>
+    {{ end }}
+    {{- if .Params.abbreviation }}<span class="glossary-inline-abbr"> — <a href="{{ .RelPermalink }}">{{ .Params.abbreviation }}</a></span>{{- end -}}
+    {{ with partial "glossary/part-of-speech" . }}<span class="glossary-inline-pos">({{.}})</span>{{ end }}
+  </dt>
+  <dd class="markdown-inner">
+    {{ with .Params.synonyms -}}
+      <div class="glossary-synonyms">synonym of
+      {{- range . -}}
+        <span class="glossary-synonym-term">{{ . }}</span>
+      {{- end -}}
+      </div>
+    {{- end }}
+    {{ with .Params.interchangeableWords -}}
+      <div class="glossary-synonyms">can be used interchangeably with
+      {{- range . -}}
+        <span class="glossary-synonym-term">{{ . }}</span>
+      {{- end -}}
+      </div>
+    {{- end }}
+    {{/*  {{ with .Params.definition }}{{ . | markdownify }}{{ end }}  */}}
+    {{ default .Summary .Params.definition | markdownify }}
+  </dd>
+{{ end }}
+</dl>
