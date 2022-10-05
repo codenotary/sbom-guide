@@ -2,23 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://nickanderegg.github.io/sbom-guide/sbom-intro/sbom-intro/</loc>
-    <lastmod>2022-09-29T21:52:32-04:00</lastmod>
+    <loc>http://nickanderegg.github.io/sbom-guide/</loc>
+    <lastmod>2022-10-04T16:28:26-04:00</lastmod>
   </url><url>
-    <loc>http://nickanderegg.github.io/sbom-guide/sbom-intro/</loc>
-    <lastmod>2022-09-29T19:06:01-04:00</lastmod>
+    <loc>http://nickanderegg.github.io/sbom-guide/sboms/sbom-intro/</loc>
+    <lastmod>2022-10-04T15:50:34-04:00</lastmod>
   </url><url>
-    <loc>http://nickanderegg.github.io/sbom-guide/sbom-intro/sbom-concepts/</loc>
-    <lastmod>2022-09-29T21:52:32-04:00</lastmod>
+    <loc>http://nickanderegg.github.io/sbom-guide/sboms/</loc>
+    <lastmod>2022-10-04T16:28:26-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/sboms/sbom-concepts/</loc>
+    <lastmod>2022-10-04T15:50:34-04:00</lastmod>
   </url><url>
     <loc>http://nickanderegg.github.io/sbom-guide/vcn-usage/</loc>
     <lastmod>2022-09-27T22:55:14-04:00</lastmod>
   </url><url>
-    <loc>http://nickanderegg.github.io/sbom-guide/sbom-intro/spdx-documents/</loc>
-    <lastmod>2022-09-29T21:52:32-04:00</lastmod>
+    <loc>http://nickanderegg.github.io/sbom-guide/sboms/spdx-documents/</loc>
+    <lastmod>2022-10-04T15:50:34-04:00</lastmod>
   </url><url>
-    <loc>http://nickanderegg.github.io/sbom-guide/sbom-intro/supply-chain/</loc>
-    <lastmod>2022-10-03T16:05:55-04:00</lastmod>
+    <loc>http://nickanderegg.github.io/sbom-guide/sboms/supply-chain/</loc>
+    <lastmod>2022-10-04T15:50:34-04:00</lastmod>
   </url><url>
     <loc>http://nickanderegg.github.io/sbom-guide/examples/</loc>
     <lastmod>2022-09-27T23:10:25-04:00</lastmod>
@@ -27,7 +30,7 @@
     <lastmod>2022-09-27T23:10:25-04:00</lastmod>
   </url><url>
     <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/</loc>
-    <lastmod>2022-09-27T23:10:25-04:00</lastmod>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
   </url><url>
     <loc>http://nickanderegg.github.io/sbom-guide/vcn-usage/intro/</loc>
     <lastmod>2022-09-27T23:10:25-04:00</lastmod>
@@ -53,17 +56,53 @@
     <loc>http://nickanderegg.github.io/sbom-guide/vcn-usage/bom-interoperability/</loc>
     <lastmod>2022-09-27T23:10:25-04:00</lastmod>
   </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/artifact/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/authentication/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/cas/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
     <loc>http://nickanderegg.github.io/sbom-guide/categories/</loc>
   </url><url>
-    <loc>http://nickanderegg.github.io/sbom-guide/</loc>
-    <lastmod>2022-09-29T21:52:32-04:00</lastmod>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/codenotary/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
   </url><url>
-    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/notarize/</loc>
-    <lastmod>2022-09-27T23:10:25-04:00</lastmod>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/community-attestation-service/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/cyclonedx/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/manifest/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/notarization/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
   </url><url>
     <loc>http://nickanderegg.github.io/sbom-guide/examples/vulnerability-search/</loc>
     <lastmod>2022-09-27T23:10:25-04:00</lastmod>
   </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/sbom/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/spdx/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/syft/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
     <loc>http://nickanderegg.github.io/sbom-guide/tags/</loc>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/trustcenter/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
+  </url><url>
+    <loc>http://nickanderegg.github.io/sbom-guide/reference/glossary/vcn/</loc>
+    <lastmod>2022-10-04T21:45:07-04:00</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Understanding SBOMs on Developer&#39;s Guide to SBOMs</title>
+    <link>http://nickanderegg.github.io/sbom-guide/sboms/</link>
+    <description>Recent content in Understanding SBOMs on Developer&#39;s Guide to SBOMs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/sboms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>http://nickanderegg.github.io/sbom-guide/sboms/sbom-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/sboms/sbom-intro/</guid>
+      <description>Introduction to Software Bills of Materials (SBOMs) # A Software Bill of Materials (SBOM) is a manifest which uniquely identifies and enumerates the software dependencies contained within a codebase, build artifact, or runtime container. A dynamic SBOM can further integrate information from vulnerability scanners to help ensure the integrity of your software supply chain.
+What is motivating the need for SBOMs? # To quote President Biden&amp;rsquo;s Executive Order 14028 on Improving the Nation’s Cybersecurity:</description>
+    </item>
+    
+    <item>
+      <title>SBOM Concepts</title>
+      <link>http://nickanderegg.github.io/sbom-guide/sboms/sbom-concepts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/sboms/sbom-concepts/</guid>
+      <description>SBOM Concepts # Improving Transparency # When the dependencies of a software asset are enumerated in an SBOM, it becomes possible to track where artifacts are deployed when new vulnerabilities are discovered. This is especially useful when the SBOM is stored in a searchable database (such as Codenotary Trustcenter).
+A software bill of materials is an important part of software supply chain security, because it surfaces the various artifacts that are bundled with a given software asset and enables developers to quickly identify and remove vulnerable components.</description>
+    </item>
+    
+    <item>
+      <title>SPDX Documents</title>
+      <link>http://nickanderegg.github.io/sbom-guide/sboms/spdx-documents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/sboms/spdx-documents/</guid>
+      <description>Documenting Software Artifacts with SBOMs # The Software Package Data Exchange (SPDX) Specification is an open standard for communicating software bill of materials (SBOM) information.
+SPDX is an initiative of the Linux Foundation created to develop tools and formats for communicating the licensing information of software packages. Most developers have probably already encountered one specification from SPDX in the form of the SPDX License List, which is &amp;ldquo;a list of commonly found licenses and exceptions used for open source and other collaborative software.</description>
+    </item>
+    
+    <item>
+      <title>Software Security</title>
+      <link>http://nickanderegg.github.io/sbom-guide/sboms/supply-chain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/sboms/supply-chain/</guid>
+      <description>Increasing the Security of Software # When it comes to using SBOMs to keep software secure, there are two main use cases:
+Identifying vulnerable components. By enumerating the components contained in a given software artifact, you can identify which components deployed on your infrastructure are vulnerable to known explots. Ensuring the integrity of software components. Likewise, ensuring the integrity of your build artifacts requires keep records that uniquely identify an asset and its provenance.</description>
+    </item>
+    
+  </channel>
+</rss>

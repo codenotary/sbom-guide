@@ -7,12 +7,120 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://nickanderegg.github.io/sbom-guide/reference/glossary/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Notarize</title>
-      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/notarize/</link>
+      <title>Artifact</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/artifact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/notarize/</guid>
-      <description> Notarize (definition) # </description>
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/artifact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Authentication</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CAS</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/cas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/cas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Codenotary</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/codenotary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/codenotary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Community Attestation Service</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/community-attestation-service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/community-attestation-service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CycloneDX</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/cyclonedx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/cyclonedx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Manifest</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/manifest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/manifest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notarization</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/notarization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/notarization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Bill of Materials</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/sbom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/sbom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Package Data Exchange</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/spdx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/spdx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Syft</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/syft/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/syft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trustcenter</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/trustcenter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/trustcenter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VCN</title>
+      <link>http://nickanderegg.github.io/sbom-guide/reference/glossary/vcn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/reference/glossary/vcn/</guid>
+      <description></description>
     </item>
     
   </channel>

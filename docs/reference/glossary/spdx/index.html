@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Authenticating Assets with Trustcenter # After an asset has been notarized with Codenotary Trustcenter, it can be authenticated to verify the integrity and signature of the asset before deployment to a production environment.
-When an asset is authenticated, vcn will verify the integrity of the asset by comparing the hash of an asset with the signed hash stored by Trustcenter. If the hash of the asset matches the signed hash stored by Trustcenter and that asset is marked as Trusted, vcn will return a success message.">
+<meta name="description" content="">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Authenticating Assets" />
-<meta property="og:description" content="Authenticating Assets with Trustcenter # After an asset has been notarized with Codenotary Trustcenter, it can be authenticated to verify the integrity and signature of the asset before deployment to a production environment.
-When an asset is authenticated, vcn will verify the integrity of the asset by comparing the hash of an asset with the signed hash stored by Trustcenter. If the hash of the asset matches the signed hash stored by Trustcenter and that asset is marked as Trusted, vcn will return a success message." />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Software Package Data Exchange" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://nickanderegg.github.io/sbom-guide/vcn-usage/authenticating-assets/" /><meta property="article:section" content="vcn-usage" />
+<meta property="og:url" content="http://nickanderegg.github.io/sbom-guide/reference/glossary/spdx/" /><meta property="article:section" content="reference" />
 
-<meta property="article:modified_time" content="2022-09-27T23:10:25-04:00" />
+<meta property="article:modified_time" content="2022-10-04T21:45:07-04:00" />
 
-<title>Authenticating Assets | Developer&#39;s Guide to SBOMs</title>
+<title>Software Package Data Exchange | Developer&#39;s Guide to SBOMs</title>
 <link rel="manifest" href="/sbom-guide/manifest.json">
 <link rel="icon" href="/sbom-guide/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/sbom-guide/book.min.3d3965ab8128c8a947d1e03f5b62b323005c10cfc9bc270cd451db1ee6f0c989.css" integrity="sha256-PTllq4EoyKlH0eA/W2KzIwBcEM/JvCcM1FHbHubwyYk=" crossorigin="anonymous">
@@ -200,7 +198,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/sbom-guide/vcn-usage/authenticating-assets/" class="active">Authenticating Assets</a>
+    <a href="/sbom-guide/vcn-usage/authenticating-assets/" class="">Authenticating Assets</a>
   
 
         </li>
@@ -379,7 +377,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/sbom-guide/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Authenticating Assets</strong>
+  <strong>Software Package Data Exchange</strong>
 
   <label for="toc-control">
     
@@ -393,17 +391,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#authenticating-assets-with-trustcenter">Authenticating Assets with Trustcenter</a>
-      <ul>
-        <li><a href="#using-vcn-to-authenticate-an-asset">Using <code>vcn</code> to authenticate an asset</a></li>
-        <li><a href="#authenticate-with-a-specific-signerid-with-vcn">Authenticate with a specific signerID with <code>vcn</code></a></li>
-        <li><a href="#authenticate-multiple-assets-with-vcn">Authenticate multiple assets with <code>vcn</code></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
 
 
 
@@ -415,34 +403,21 @@ https://github.com/alex-shpak/hugo-book
       
       
       
-  <article class="markdown"><h1 id="authenticating-assets-with-trustcenter">
-  Authenticating Assets with Trustcenter
-  <a class="anchor" href="#authenticating-assets-with-trustcenter">#</a>
-</h1>
-<p>After an asset has been notarized with Codenotary Trustcenter, it can be authenticated to verify the integrity and signature of the asset before deployment to a production environment.</p>
-<p>When an asset is authenticated, <code>vcn</code> will verify the integrity of the asset by comparing the hash of an asset with the signed hash stored by Trustcenter. If the hash of the asset matches the signed hash stored by Trustcenter and that asset is marked as Trusted, <code>vcn</code> will return a success message.</p>
-<h2 id="using-vcn-to-authenticate-an-asset">
-  Using <code>vcn</code> to authenticate an asset
-  <a class="anchor" href="#using-vcn-to-authenticate-an-asset">#</a>
-</h2>
-<p>To authenticate an asset, which verifies the integrity of the asset by comparing it with the signed hash stored immutably by Trustcenter, use the <code>vcn authenticate</code> command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vcn authenticate &lt;asset&gt;
-</span></span></code></pre></div><p><code>vcn</code> will query your immutable ledger in Trustcenter for a notarized record of the asset. If the record is found and the asset has been marked as Trusted, the asset has been authenticated and can be released to production.</p>
-<h2 id="authenticate-with-a-specific-signerid-with-vcn">
-  Authenticate with a specific signerID with <code>vcn</code>
-  <a class="anchor" href="#authenticate-with-a-specific-signerid-with-vcn">#</a>
-</h2>
-<p>Using signerID:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vcn authenticate --signerID &lt;signerID&gt; &lt;asset&gt;
-</span></span></code></pre></div><h2 id="authenticate-multiple-assets-with-vcn">
-  Authenticate multiple assets with <code>vcn</code>
-  <a class="anchor" href="#authenticate-multiple-assets-with-vcn">#</a>
-</h2>
-<p>To authenticate assets in batches, you can use 
-  <a href="https://man7.org/linux/man-pages/man1/xargs.1.html"><code>xargs</code></a> to call <code>vcn authenticate</code> on each asset in a directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls | xargs vcn authenticate
-</span></span></code></pre></div></article>
- 
+  <article class="markdown glossary"><div class="glossary-entry-heading">
+  <span class="glossary-return-text">Return to</span>
+  <a class="glossary-return-link" href="/sbom-guide/reference/glossary/">Glossary</a>
+</div>
+<h1>Software Package Data Exchange</h1>
+
+<div class="glossary-title-pos">specification</div>
+
+<div class="glossary-definition markdown-inner">An open standard for communicating software bill of materials (SBOM) information. It is maintained as an initiative of the Linux Foundation and was created to develop tools and formats for communicating the licensing information of software packages.</div>
+
+
+
+
+  </article>
+
       
       
 
@@ -467,10 +442,6 @@ https://github.com/alex-shpak/hugo-book
 
       
   
-  <div class="book-comments">
-
-</div>
-  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -481,17 +452,7 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#authenticating-assets-with-trustcenter">Authenticating Assets with Trustcenter</a>
-      <ul>
-        <li><a href="#using-vcn-to-authenticate-an-asset">Using <code>vcn</code> to authenticate an asset</a></li>
-        <li><a href="#authenticate-with-a-specific-signerid-with-vcn">Authenticate with a specific signerID with <code>vcn</code></a></li>
-        <li><a href="#authenticate-multiple-assets-with-vcn">Authenticate multiple assets with <code>vcn</code></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
 
 
  

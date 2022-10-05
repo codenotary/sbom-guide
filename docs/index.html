@@ -4,20 +4,19 @@
 	<meta name="generator" content="Hugo 0.104.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Developer&rsquo;s Guide to SBOMs # Most modern applications are built atop a growing library of open-source and proprietary components; it would be tedious and time-consuming to manually identify each component, evaluate the components&rsquo; dependencies, and determine if those components are then suitable for inclusion in the project.
-Instead, automated software can assemble a Software Bill of Materials (SBOM) for each release artifact at some point in the build pipeline, when dependency and build information is readily available.">
+<meta name="description" content="">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Introduction" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Developer&#39;s Guide to SBOMs" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://nickanderegg.github.io/sbom-guide/" />
 
-<title>Introduction | Developer&#39;s Guide to SBOMs</title>
+<title>Developer&#39;s Guide to SBOMs | Developer&#39;s Guide to SBOMs</title>
 <link rel="manifest" href="/sbom-guide/manifest.json">
 <link rel="icon" href="/sbom-guide/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/sbom-guide/book.min.6bc240c5f2772bbf292d71ebecdd834f8eef2cf9fa07674b079fe2698f0915c9.css" integrity="sha256-a8JAxfJ3K78pLXHr7N2DT47vLPn6B2dLB5/iaY8JFck=" crossorigin="anonymous">
+<link rel="stylesheet" href="/sbom-guide/book.min.3d3965ab8128c8a947d1e03f5b62b323005c10cfc9bc270cd451db1ee6f0c989.css" integrity="sha256-PTllq4EoyKlH0eA/W2KzIwBcEM/JvCcM1FHbHubwyYk=" crossorigin="anonymous">
   <script defer src="/sbom-guide/flexsearch.min.js"></script>
-  <script defer src="/sbom-guide/en.search.min.86038800eec8f7c787edfb5a7c241dcbcb88b20b2c95d1899351bf4fb24c7921.js" integrity="sha256-hgOIAO7I98eH7ftafCQdy8uIsgssldGJk1G/T7JMeSE=" crossorigin="anonymous"></script>
+  <script defer src="/sbom-guide/en.search.min.99f6622a93b65770cbc3433712a10b6d5f51ab54710d98289e149cefa55ea985.js" integrity="sha256-mfZiKpO2V3DLw0M3EqELbV9Rq1RxDZgonhSc76VeqYU=" crossorigin="anonymous"></script>
 
   <script defer src="/sbom-guide/sw.min.7e5d3d741a2cbe5d2c6c4f16e894e371d828f808c9041b41247360eafd51962a.js" integrity="sha256-fl09dBosvl0sbE8W6JTjcdgo&#43;AjJBBtBJHNg6v1Rlio=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="http://nickanderegg.github.io/sbom-guide/index.xml" title="Developer's Guide to SBOMs" />
@@ -66,6 +65,24 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     
       
+        <li>
+          
+  
+  
+
+  
+    <a href="/sbom-guide/" class="">Main Page</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
         <li class="book-section-flat" >
           
   
@@ -85,7 +102,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/sbom-guide/sbom-intro/sbom-intro/" class="">Introduction</a>
+    <a href="/sbom-guide/sboms/sbom-intro/" class="">Introduction</a>
   
 
         </li>
@@ -98,7 +115,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/sbom-guide/sbom-intro/sbom-concepts/" class="">SBOM Concepts</a>
+    <a href="/sbom-guide/sboms/sbom-concepts/" class="">SBOM Concepts</a>
   
 
         </li>
@@ -111,7 +128,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/sbom-guide/sbom-intro/spdx-documents/" class="">SPDX Documents</a>
+    <a href="/sbom-guide/sboms/spdx-documents/" class="">SPDX Documents</a>
   
 
         </li>
@@ -124,7 +141,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/sbom-guide/sbom-intro/supply-chain/" class="">Software Security</a>
+    <a href="/sbom-guide/sboms/supply-chain/" class="">Software Security</a>
   
 
         </li>
@@ -360,7 +377,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/sbom-guide/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Introduction</strong>
+  <strong>Developer&#39;s Guide to SBOMs</strong>
 
   <label for="toc-control">
     
@@ -374,16 +391,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#developers-guide-to-sboms">Developer&rsquo;s Guide to SBOMs</a>
-      <ul>
-        <li><a href="#why-sboms">Why SBOMs?</a></li>
-        <li><a href="#why-does-this-matter-to-me">Why does this matter to me?</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+
 
 
 
@@ -394,47 +402,10 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="developers-guide-to-sboms">
-  Developer&rsquo;s Guide to SBOMs
-  <a class="anchor" href="#developers-guide-to-sboms">#</a>
-</h1>
-<p>Most modern applications are built atop a growing library of open-source and proprietary components; it would be tedious and time-consuming to manually identify each component, evaluate the components&rsquo; dependencies, and determine if those components are then suitable for inclusion in the project.</p>
-<p>Instead, automated software can assemble a Software Bill of Materials (SBOM) for each release artifact at some point in the build pipeline, when dependency and build information is readily available.</p>
-<blockquote class="book-hint info">
-  <p><strong>Definition of <em>Software Bill of Materials</em></strong></p>
-<p>A <strong><dfn title="software bill of materials">Software Bill of Materials (<abbr title="software bill of materials">SBOM</abbr>)</dfn></strong> is a manifest which uniquely identifies and enumerates the software dependencies contained within a codebase, build artifact, or runtime container.</p>
-
-</blockquote>
-
-<h2 id="why-sboms">
-  Why SBOMs?
-  <a class="anchor" href="#why-sboms">#</a>
-</h2>
-<p>The SBOM is a mechanism to share build-time component inventories between projects and developers, and it serves as a fundamental tool for managing software supply chain integrity.</p>
-<p><strong>Without knowing what dependencies are included in a given third-party library, it&rsquo;s impossible to keep vulnerable components away from production.</strong> Likewise, without an inventory of the software running on your infrastructure, it&rsquo;s impossible to determine which components are affected after new vulnerabilities are discovered.</p>
-<h2 id="why-does-this-matter-to-me">
-  Why does this matter to me?
-  <a class="anchor" href="#why-does-this-matter-to-me">#</a>
-</h2>
-<p>If you are a software developer or DevOps engineer, you should be aware of SBOMs and their applications. Even if you are not <em>yet</em> required to provide SBOMs for your projects, you can still benefit from the transparency and integrity they provide to the software supply chain.</p>
-<div class="book-columns flex flex-wrap">
-
-  <div class="flex-even markdown-inner">
-    Col 1.
-  </div>
-
-  <div class="flex-even markdown-inner">
-    Col 2.
-  </div>
-
-  <div class="flex-even markdown-inner">
-    Col 3.
-  </div>
-
-</div>
-
-</article>
+      
+  <article class="markdown"></article>
  
+      
       
 
       <footer class="book-footer">
@@ -458,10 +429,6 @@ https://github.com/alex-shpak/hugo-book
 
       
   
-  <div class="book-comments">
-
-</div>
-  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -472,16 +439,7 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#developers-guide-to-sboms">Developer&rsquo;s Guide to SBOMs</a>
-      <ul>
-        <li><a href="#why-sboms">Why SBOMs?</a></li>
-        <li><a href="#why-does-this-matter-to-me">Why does this matter to me?</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+
 
 
  
@@ -493,6 +451,8 @@ https://github.com/alex-shpak/hugo-book
   
 </body>
 </html>
+
+
 
 
 
