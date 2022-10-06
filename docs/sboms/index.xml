@@ -46,5 +46,14 @@ SPDX is an initiative of the Linux Foundation created to develop tools and forma
 Identifying vulnerable components. By enumerating the components contained in a given software artifact, you can identify which components deployed on your infrastructure are vulnerable to known explots. Ensuring the integrity of software components. Likewise, ensuring the integrity of your build artifacts requires keep records that uniquely identify an asset and its provenance.</description>
     </item>
     
+    <item>
+      <title>CycloneDX Documents</title>
+      <link>http://nickanderegg.github.io/sbom-guide/sboms/cyclonedx-documents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nickanderegg.github.io/sbom-guide/sboms/cyclonedx-documents/</guid>
+      <description>Communicating Known Vulnerabilities with SBOMs # We&amp;rsquo;ve already seen how an inventory of components is necessary for establishing the chain of custody of software components, but a manifest of the components used to build a piece of software cannot, by itself, prevent the use of vulnerable components. So far, we&amp;rsquo;ve primarily seen how SBOMs—which are snapshots of asset composition—can be used to ensure the integrity of known software components. But what about the security of those components?</description>
+    </item>
+    
   </channel>
 </rss>

@@ -58,18 +58,6 @@ This process creates a chain of custody for the asset and its dependencies, allo
     </item>
     
     <item>
-      <title>Working with Dependencies</title>
-      <link>http://nickanderegg.github.io/sbom-guide/vcn-usage/managing-dependencies/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/vcn-usage/managing-dependencies/</guid>
-      <description> Looking up known dependencies with vcn # To
-vcn a --bom-what-includes (&amp;lt;scheme&amp;gt;://&amp;lt;name&amp;gt;@&amp;lt;version&amp;gt; | --hash &amp;lt;hash&amp;gt;) Container support with vcn # To
-vcn &amp;lt;command&amp;gt; &amp;lt;scheme&amp;gt;://&amp;lt;image_or_container&amp;gt; [command options] Cascade operations with vcn # To
-vcn notarize|untrust|unsupport [command options ...] --bom-cascade [--bom-force] </description>
-    </item>
-    
-    <item>
       <title>Authenticating Dependencies</title>
       <link>http://nickanderegg.github.io/sbom-guide/vcn-usage/dependency-authentication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -78,16 +66,6 @@ vcn notarize|untrust|unsupport [command options ...] --bom-cascade [--bom-force]
       <description>Authenticating Trusted Dependencies # If we attempt to authenticate a Docker image which has not yet been notarized with our signing key, we receive a warning that the asset hasn&amp;rsquo;t yet been notarized:
 ❯ vcn authenticate --bom docker://python:3.9-alpine Warning: c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf was not notarized When we then notarize the image, all of its dependencies are resolved, authenticated with Trustcenter, signed, and marked as Trusted:
 ❯ vcn notarize --bom image://python:3.9-alpine Your assets will not be uploaded.</description>
-    </item>
-    
-    <item>
-      <title>Working with Other Tools</title>
-      <link>http://nickanderegg.github.io/sbom-guide/vcn-usage/bom-interoperability/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://nickanderegg.github.io/sbom-guide/vcn-usage/bom-interoperability/</guid>
-      <description>Exchanging Data with Other Tools # Import from spfx and cyclonedx # TODO.
-Export to spfx or cyclonedx # TODO.</description>
     </item>
     
   </channel>
