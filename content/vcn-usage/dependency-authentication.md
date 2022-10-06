@@ -4,14 +4,14 @@ weight: 160
 draft: false
 ---
 
-### Authenticating Trusted Dependencies
+# Authenticating Known and Trusted Dependencies
 
 If we attempt to authenticate a Docker image which has not yet been notarized with our signing key, we receive a warning that the asset hasn't yet been notarized:
 
 ```bash
-❯ vcn authenticate --bom docker://python:3.9-alpine 
+❯ vcn authenticate --bom docker://python:3.9-alpine
 
-Warning: c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf was not notarized 
+Warning: c9b90024bc4d49b1fa0ea4673b6eb1db1058cd1cba4b840d336bedf803a0afcf was not notarized
 ```
 
 When we then notarize the image, all of its dependencies are resolved, authenticated with Trustcenter, signed, and marked as `Trusted`:
