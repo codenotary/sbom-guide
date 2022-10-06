@@ -34,5 +34,5 @@ If you would like to better understand the SBOM concept, you can begin reading w
 
 <--->
 
-If you would like to start using Codenotary Trustcenter to improve the security of your software supply chain, you can begin with...
+If you would like to start using Codenotary Trustcenter to improve the security of your software supply chain, you can begin with our [Introduction to VCN]({{< ref "/vcn-usage/intro" >}} "Introduction to VCN") to see it in action.
 {{< /columns >}}
