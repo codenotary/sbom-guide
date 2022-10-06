@@ -6,7 +6,7 @@ theme: hugo-book
 # Book configuration
 disablePathToLower: true
 enableGitInfo: true
-publishDir: docs
+publishDir: public
 
 # Needed for mermaid/katex shortcodes
 markup:
