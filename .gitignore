@@ -1,5 +1,6 @@
 # Hugo generated directories
 resources/_gen/
+.hugo_build.lock
 
 # Hugo publish directory
 
