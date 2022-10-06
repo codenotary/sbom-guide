@@ -1,1 +1,0 @@
-navigator.serviceWorker&&navigator.serviceWorker.register("/sbom-guide/sw.js",{scope:"/"})
