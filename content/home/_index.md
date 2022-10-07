@@ -4,7 +4,14 @@ title: "Main Page"
 url: /
 ---
 
-# Developer's Guide to SBOMs
+<h1 class="site-heading">The Developer's Guide to SBOMs</h1>
+
+<div class="publisher-info">
+  <a href="https://codenotary.com" class="publisher-link">
+    <span class="publisher-attribution">This site is brought to you by</span>
+    <img src="codenotary.svg" alt="Codenotary" class="codenotary-logo">
+  </a>
+</div>
 
 Most modern applications are built atop a growing library of open-source and proprietary components; it would be tedious and time-consuming to manually identify each component, evaluate the components' dependencies, and determine if those components are then suitable for inclusion in the project.
 

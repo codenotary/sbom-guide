@@ -190,3 +190,123 @@ article.glossary {
     }
   }
 }
+
+#site-logo {
+  width: 100%;
+  display: block;
+}
+
+#site-title {
+  display: block;
+}
+
+h2.book-brand {
+  display: block;
+  height: auto;
+
+  margin-top: 2em;
+  margin-bottom: 3em;
+
+  img {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img + span {
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+.publisher-info {
+  display: block;
+  width: 100%;
+  text-align: center;
+  max-height: 100px;
+
+  margin: 3em auto;
+
+  a, a:hover, a:focus, a:active, a:visited {
+    text-decoration: none;
+    color: var(--body-font-color)
+  }
+
+  .publisher-link {
+    display: flex;
+    width: 100%;
+
+    .publisher-attribution {
+      display: block;
+      // width: 100%;
+      text-align: center;
+      font-style:italic;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: auto;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    .codenotary-logo {
+      display: block;
+      // width: 100%;
+      text-align: center;
+      // margin-top: 1em;
+      max-width: 250px;
+      vertical-align: middle;
+      margin-right: auto;
+    }
+  }
+}
+
+article.markdown {
+
+  h1 ~ p:first-of-type {
+    text-align:justify;
+  }
+
+  h1 + p {
+    margin-top: 2.5em;
+  }
+
+  h2, h3, h4 {
+    margin-top: 3em;
+    & + p {
+      margin-top: 2em;
+    }
+  }
+}
+
+h1.site-heading {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+div.book-search {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+// aside.book-menu {
+//   margin-right: 5rem;
+// }
+
+aside.book-toc {
+  margin-top: 2em;
+
+  .book-toc-content {
+    padding-top: 5rem;
+  }
+}
+
+main.container {
+  max-width: 120rem;
+}
+
+article {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 55rem;
+}
