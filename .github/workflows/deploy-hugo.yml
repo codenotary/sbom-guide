@@ -8,6 +8,9 @@ on:
       - '.github/**'
   workflow_dispatch:
 
+env:
+  HUGO_ENV: ${{ secrets.HUGO_ENV }}
+
 concurrency:
   group: deploy-hugo
   cancel-in-progress: true
@@ -44,7 +47,11 @@ jobs:
       # minification, and garbage collection.
       - id: build-site
         name: Build static site with Hugo
-        run: hugo --environment production --gc --minify --logFile hugo-build.log --verboseLog
+        run: |
+            hugo config --verbose > hugo-env-config.log
+            HUGO_BUILD_ENV=${HUGO_ENV:-production}
+            echo "Building with ${HUGO_BUILD_ENV} configuration..."
+            hugo --environment ${HUGO_BUILD_ENV} --gc --minify --logFile hugo-build.log --verboseLog --verbose
 
       # Save the build log for this workflow run
       - id: store-logs
@@ -53,6 +60,13 @@ jobs:
         with:
           name: hugo-build-log
           path: hugo-build.log
+
+      - id: store-config
+        name: Store Hugo config output
+        uses: actions/upload-artifact@v2
+        with:
+          name: hugo-env-config
+          path: hugo-env-config.log
 
       - id: tar-build-dir
         run: |
