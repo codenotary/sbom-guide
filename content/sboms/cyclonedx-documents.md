@@ -16,7 +16,11 @@ In this section of the guide, we'll look at how CycloneDX SBOMs can be used in a
 
 One use case that is enabled by CycloneDX is the ability to communicate the exploitability of a known vulnerability in a component—in the context of a specific software project.
 
-For instance, [one Vulnerability Exploitability Exchange (VEX) example from CycloneDX](https://github.com/CycloneDX/bom-examples/tree/master/VEX/Use-Cases/Case-1) demonstrates how the risk of vulnerabilities inhereted from upstream components can be communicated between projects. In this excerpt, the `vulnerabilities` property of the SBOM indicates that there is a known vulnerability `CVE-2020-25649` in a dependency of the project, but because the vulnerable code is not used by the current project, the vulnerability is not exploitable:
+For instance, [one Vulnerability Exploitability Exchange (VEX) example from CycloneDX](https://github.com/CycloneDX/bom-examples/tree/master/VEX/Use-Cases/Case-1) demonstrates how the risk of vulnerabilities inhereted from upstream components can be communicated between projects.
+
+{{< details title="Example: Communicate vulnerabilities with CycloneDX" open=false >}}
+
+In this excerpt, the `vulnerabilities` property of the SBOM indicates that there is a known vulnerability `CVE-2020-25649` in a dependency of the project, but because the vulnerable code is not used by the current project, the vulnerability is not exploitable:
 
 ```json
 {
@@ -50,6 +54,7 @@ For instance, [one Vulnerability Exploitability Exchange (VEX) example from Cycl
   ]
 }
 ```
+{{< /details >}}
 
 ## Analyzing the Chain of Custody
 
