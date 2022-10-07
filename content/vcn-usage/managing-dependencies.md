@@ -1,10 +1,10 @@
 ---
 title: Working with Dependencies
-weight: 150
+weight: 160
 draft: false
 ---
 
-# Aritfacts and Dependencies
+# Artifacts and Dependencies
 
 ## Looking up known dependencies with `vcn`
 

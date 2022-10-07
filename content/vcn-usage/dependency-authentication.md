@@ -1,6 +1,6 @@
 ---
 title: Authenticating Dependencies
-weight: 160
+weight: 150
 draft: false
 ---
 
