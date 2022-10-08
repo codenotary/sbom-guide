@@ -1,4 +1,3 @@
-baseURL: http://nickanderegg.github.io/sbom-guide/
 languageCode: en-us
 title: Developer's Guide to SBOMs
 theme: hugo-book
