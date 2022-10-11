@@ -310,3 +310,42 @@ article {
   margin-left: auto;
   max-width: 55rem;
 }
+
+.docs-nav-box {
+  // border: 1px solid black;
+  padding: 0.5em;
+  max-width: 40%;
+  min-width: 225px;
+
+  margin-top: 2em;
+  margin-bottom: 3em;
+
+  flex: 1;
+  flex-direction: column;
+
+  &.docs-nav-next {
+    margin-left: auto;
+    margin-right: 0;
+    float: right;
+  }
+
+  &.docs-nav-prev {
+    margin-left: 0;
+    margin-right: auto;
+    float: left;
+  }
+
+  .docs-nav-text {
+    display: block;
+    width: 7em;
+    text-align: center;
+    margin: 0 auto 1em;
+    padding: 0.25em;
+    // border-bottom: 1px solid black;
+  }
+
+  .docs-nav-link {
+    display: block;
+    text-align: center;
+  }
+}

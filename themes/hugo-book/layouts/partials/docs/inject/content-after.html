@@ -1,0 +1,12 @@
+{{ with .Next }}
+<div class="docs-nav-box docs-nav-prev">
+  <span class="docs-nav-text">Last topic:</span>
+  <a href="{{ .RelPermalink }}" class="docs-nav-link">← {{.Title}}</a>
+</div>
+{{ end }}
+{{ with .Prev }}
+<div class="docs-nav-box docs-nav-next">
+  <span class="docs-nav-text">Next topic:</span>
+  <a href="{{ .RelPermalink }}" class="docs-nav-link">{{.Title}} →</a>
+</div>
+{{ end }}
