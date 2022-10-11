@@ -15,6 +15,8 @@
 {{- $manifest := resources.Get "manifest.json" | resources.ExecuteAsTemplate "manifest.json" . }}
 <link rel="manifest" href="{{ $manifest.RelPermalink }}">
 
+{{- if false -}}
+<!-- Old favicon, hidden by if statement
 <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/x-icon">
 <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" />
 <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="{{ "favicon.ico" | relURL }}">
@@ -28,6 +30,13 @@
 <link rel="icon" sizes="32x32" href="{{ "favicon-32.png" | relURL }}" >
 <link rel="icon" sizes="96x96" href="{{ "favicon-96.png" | relURL }}">
 <link rel="icon" sizes="192x192" href="{{ "favicon-192.png" | relURL }}">
+-->
+{{- end -}}
+
+<link rel="icon" href="{{ "favicon-32x32.png" | relURL }}" sizes="32x32">
+<link rel="icon" href="{{ "favicon-192x192.png" | relURL }}" sizes="192x192">
+<link rel="apple-touch-icon" href="{{ "favicon-180x180.png" | relURL }}">
+<meta name="msapplication-TileImage" content="{{ "favicon-270x270.png" | relURL }}">
 
 {{- range .Translations }}
   <link rel="alternate" hreflang="{{ default .Language.Lang .Site.LanguageCode }}" href="{{ .Permalink }}" title="{{ partial "docs/title" . }}">
